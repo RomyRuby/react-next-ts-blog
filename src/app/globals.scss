@@ -2,6 +2,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --theme-color: #5667F1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +13,6 @@
   }
 }
 
-$primary-color: #5667F1;
 
 body {
   font-weight: 400;
@@ -20,70 +20,7 @@ body {
   color: #27264D;
   background: linear-gradient(180deg, #FAFAFC 0%, #F1F1F8 50%, #F0F1F8 100%);
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-  .layout-header {
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-
-    .layout-header-avatar {
-      width: 60px;
-      display: flex;
-      justify-content: center;
-
-      .layout-header-avatar-icon {
-        width: 40px;
-        height: 40px;
-        background-color: powderblue;
-        border-radius: 16px;
-      }
-    }
-
-    .layout-header-nav {
-      height: 35px;
-      border: 1px solid #E2E3E9;
-      display: flex;
-      align-items: center;
-      border-radius: 18px;
-      padding: 0 16px;
-      background-color: #ffffff;
-
-      .layout-header-nav-item {
-        cursor: pointer;
-        font-size: 500;
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-
-        .layout-header-nav-item-text {
-          margin-left: 4px;
-        }
-
-        &:hover {
-          font-weight: 600;
-          color: $primary-color;
-        }
-      }
-    }
-
-
-    .layout-header-user {
-      width: 60px;
-      display: flex;
-      justify-content: center;
-
-      .layout-header-user-avatar {
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-sizing: border-box;
-        border: 1px solid #e5e7eb;
-        border-radius: 50%;
-      }
-    }
-  }
 }
