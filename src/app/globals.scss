@@ -2,7 +2,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --theme-color: #5667F1;
+  --theme-color: #5667f1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,14 +13,36 @@
   }
 }
 
-
 body {
   font-weight: 400;
   font-size: 14px;
-  color: #27264D;
-  background: linear-gradient(180deg, #FAFAFC 0%, #F1F1F8 50%, #F0F1F8 100%);
+  color: #27264d;
+  background: linear-gradient(180deg, #fafafc 0%, #f1f1f8 50%, #f0f1f8 100%);
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+}
 
+// 全局滚动条样式调整
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(39, 38, 77, 0.1);
+  border-radius: 4px;
 }
