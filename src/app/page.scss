@@ -1,8 +1,7 @@
 .main {
   position: relative;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+
   .main-home {
     position: relative;
     height: 100%;
@@ -56,16 +55,98 @@
 
   .main-article {
     position: relative;
+    margin: 84px auto 0 auto;
+    position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    min-width: 940px;
     .main-article-content {
-      max-width: 600px;
-      min-width: 470px;
+      position: relative;
+      width: 90%;
       margin: auto;
       .main-article-title {
         font-size: 22px;
         font-weight: 500;
       }
+      .main-article-list {
+        margin-top: 24px;
+        .main-article-item {
+          position: relative;
+          display: flex;
+          .main-article-item-icon {
+            width: 8px;
+            height: 24px;
+            position: absolute;
+            top: 12px;
+
+            .main-article-item-icon-circle {
+              margin: auto;
+              width: 8px;
+              height: 8px;
+              border-radius: 4px;
+              background-color: var(--theme-color);
+            }
+            .main-article-item-icon-line {
+              margin: auto;
+              width: 2px;
+              height: 24px;
+              background-color: var(--theme-color);
+            }
+          }
+          .main-article-item-title {
+            padding: 0 16px;
+            line-height: 32px;
+          }
+          .main-article-item-date {
+            margin-left: auto;
+            font-size: 12px;
+            color: var(--font-sub-color);
+            line-height: 32px;
+          }
+          &:last-child {
+            .main-article-item-icon-line {
+              display: none;
+            }
+          }
+        }
+      }
+      .main-article-more {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 32px;
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .main-album {
+    margin: 84px auto 0 auto;
+    max-width: 1200px;
+    min-width: 940px;
+    .main-album-title {
+      width: 90%;
+      margin: auto;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .main-album-list {
+      width: 90%;
+      margin: auto;
+      margin-top: 24px;
+      height: 160px;
+    }
+  }
+
+  .main-end {
+    margin-top: 84px;
+    text-align: center;
+
+    .main-end-guide {
+      font-size: 18px;
     }
   }
 }

@@ -50,13 +50,108 @@ export default function Home() {
         <div className="main-article">
           <div className="main-article-content">
             <div className="main-article-title">最近更新的笔记</div>
+            <div className="main-article-list">
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>{" "}
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>{" "}
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>
+            </div>
+            <div className="main-article-more">
+              <Icon name="circleRight" />
+              <span>还有更多</span>
+            </div>
           </div>
           <div className="main-article-content">
             <div className="main-article-title">最近更新的日记</div>
+            <div className="main-article-list">
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>{" "}
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>{" "}
+              <div className="main-article-item">
+                <div className="main-article-item-icon">
+                  <div className="main-article-item-icon-circle"></div>
+                  <div className="main-article-item-icon-line"></div>
+                </div>
+                <div className="main-article-item-title">
+                  人机交互：页面过渡动画和内容呈现
+                </div>
+                <div className="main-article-item-date">1 个月前</div>
+              </div>
+            </div>
+            <div className="main-article-more">
+              <Icon name="circleRight" />
+              <span>还有更多</span>
+            </div>
           </div>
         </div>
 
-        <div className="main-album">世间只是一些影影绰绰的温柔</div>
+        <div className="main-album">
+          <div className="main-album-title">世间只是一些影影绰绰的温柔</div>
+          <div className="main-album-list">111</div>
+        </div>
 
         <div className="main-end">
           <div className="main-end-guide">可以绕行，狐疑，留在原地</div>
