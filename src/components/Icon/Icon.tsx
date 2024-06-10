@@ -1,4 +1,4 @@
-import icons from "@/components/Icon/iconSvg";
+import icons from "@/components/icon/iconSvg";
 import { ReactNode } from "react";
 import "./icon.scss";
 

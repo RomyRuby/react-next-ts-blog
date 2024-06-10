@@ -1,13 +1,11 @@
 .main {
   position: relative;
-  height: 100vh;
 
   .main-home {
     position: relative;
-    height: 100%;
+    height: 100vh;
     padding: calc(50vh - 170px) 0 0 0;
     box-sizing: border-box;
-    // height: 100vh;
     .main-introduce {
       display: grid;
       grid-template-columns: 50% 50%;

@@ -1,11 +1,10 @@
 import "./page.scss";
-import Header from "../components/Header/Header";
-import Icon from "@/components/Icon/Icon";
+import Image from "next/image";
+import Icon from "@/components/icon/Icon";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <div className="main">
         <div className="main-home">
           <div className="main-introduce">
@@ -33,8 +32,13 @@ export default function Home() {
               </div>
             </div>
             <div className="main-introduce-right">
-              {/* <img src="../assets/img/avatar.jpg" /> */}
-              <img src="/static/img/avatar.jpg" />
+              <Image
+                priority={true}
+                src="/static/img/avatar.jpg"
+                alt=""
+                width={300}
+                height={300}
+              />
             </div>
           </div>
           <div className="main-guide">
@@ -159,11 +163,6 @@ export default function Home() {
           <div className="main-end-nav"></div>
           <div className="main-end-operate"></div>
         </div>
-      </div>
-
-      <div className="footer">
-        <div className="footer-copyright"></div>
-        <div className="footer-operate"></div>
       </div>
     </>
   );
