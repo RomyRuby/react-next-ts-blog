@@ -1,8 +1,16 @@
 import "./page.scss";
 import Image from "next/image";
 import Icon from "@/components/icon/Icon";
+import { getPosts, getPost } from "@/lib/data";
 
-export default function Home() {
+export const metadata = {
+  title: "xxx",
+  description: "xxxx",
+};
+
+const Home = async () => {
+  // const posts = await getPost("test");
+  // console.log(posts);
   return (
     <>
       <div className="main">
@@ -166,4 +174,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

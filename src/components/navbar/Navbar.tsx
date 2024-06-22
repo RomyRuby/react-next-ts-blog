@@ -1,4 +1,5 @@
 import "./Navbar.scss";
+import Link from "next/link";
 import Icon from "@/components/icon/Icon";
 
 const Navbar = () => {
@@ -10,11 +11,16 @@ const Navbar = () => {
       <div className="layout-navbar-nav">
         <div className="layout-navbar-nav-item">
           <Icon name="home" />
-          <span className="layout-navbar-nav-item-text"> 首页</span>
+          <Link className="layout-navbar-nav-item-text" href="/">
+            首页
+          </Link>
         </div>
         <div className="layout-navbar-nav-item">
           <Icon name="article" />
-          <span className="layout-navbar-nav-item-text"> 文稿</span>
+          <Link className="layout-navbar-nav-item-text" href="/articles">
+            文稿
+          </Link>
+          {/* <span className="layout-navbar-nav-item-text"> 文稿</span> */}
         </div>
         <div className="layout-navbar-nav-item">
           <Icon name="diary" />
