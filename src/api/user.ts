@@ -1,10 +1,13 @@
 import request from "@/utils/request";
-import { SignUp } from "@/types/user";
+import { SignUpParams, LoginParams } from "@/types/user";
 
 
-export function signUp(params: SignUp) {
+export function signUp(params: SignUpParams) {
   return request.post('http://localhost:8080/users/signUp', params)
 }
 
 
+export function login(params: LoginParams) {
+  return request.post('http://localhost:8080/users/login', params)
+}
 
