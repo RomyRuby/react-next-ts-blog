@@ -11,3 +11,11 @@ export function login(params: LoginParams) {
   return request.post('http://localhost:8080/users/login', params)
 }
 
+
+export function getUserInfo(token: string) {
+  return request.get('http://localhost:8080/users/info', {
+    headers: {
+      'Authorization': token
+    }
+  })
+}

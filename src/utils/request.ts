@@ -1,13 +1,29 @@
+
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const request = axios.create({
   withCredentials: true
 });
 
+// axios.defaults.headers.cookie = context.req.headers.cookie || null
+
+
+//token封装
+const setAuthToken = () => {
+  if (Cookies.get("token") && Cookies.get("token") !== "") {
+    return Cookies.get("token");
+  } else {
+    return '';
+  }
+};
+
+
 // 添加请求拦截器
 request.interceptors.request.use(
   function (config) {
-
+    // const token = setAuthToken()
+    // config.headers['Authorization'] = token;
     return config;
   },
   function (error) {

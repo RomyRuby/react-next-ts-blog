@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "axios": "^1.7.2",
+    "cookie": "^0.6.0",
     "highlight.js": "^11.9.0",
+    "js-cookie": "^3.0.5",
     "mongoose": "^8.0.0",
     "next": "14.2.3",
     "react": "^18",
+    "react-cookie": "^7.1.4",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
     "rehype-highlight": "^7.0.0",
@@ -21,6 +24,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

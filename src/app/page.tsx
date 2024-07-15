@@ -1,16 +1,32 @@
+// "use client";
 import "./page.scss";
 import Image from "next/image";
 import Icon from "@/components/icon/Icon";
 import { getPosts, getPost } from "@/lib/data";
+import * as request from "@/api/user";
+import { useEffect } from "react";
+import { cookies } from "next/headers";
+import axios from "axios";
 
 export const metadata = {
   title: "xxx",
   description: "xxxx",
 };
 
-const Home = async () => {
-  // const posts = await getPost("test");
-  // console.log(posts);
+const getUser = async () => {
+  const cookieStore = cookies();
+  const token = cookieStore.get("token")?.value;
+  const value = token ? token : "";
+  const res = await request.getUserInfo(value);
+  console.log("xxx", res);
+};
+
+const Home = () => {
+  // useEffect(() => {
+  //   getUser();
+  // }, []);
+  getUser();
+
   return (
     <>
       <div className="main">

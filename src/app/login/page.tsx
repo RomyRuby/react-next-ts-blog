@@ -1,6 +1,7 @@
 "use client";
 import { ChangeEvent, useState } from "react";
 import * as request from "@/api/user";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ const Login = () => {
   const handleLogin = async () => {
     const params = { email, password };
     const res = await request.login(params);
-    console.log(res);
+    Cookies.set("token", res.data.token);
   };
 
   return (
