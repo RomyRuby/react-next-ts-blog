@@ -9,8 +9,8 @@ import { cookies } from "next/headers";
 import axios from "axios";
 
 export const metadata = {
-  title: "xxx",
-  description: "xxxx",
+  title: "Romy Zhang",
+  description: "Romy Zhang's blog",
 };
 
 const getUser = async () => {
@@ -18,51 +18,43 @@ const getUser = async () => {
   const token = cookieStore.get("token")?.value;
   const value = token ? token : "";
   const res = await request.getUserInfo(value);
-  console.log("xxx", res);
 };
 
 const Home = () => {
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
-  getUser();
-
   return (
     <>
       <div className="main">
         <div className="main-home">
           <div className="main-introduce">
             <div className="main-introduce-left">
-              <div className="main-introduce-content">
-                <div className="main-introduce-left-greeting">
-                  Hi, I'm Romy Zhang👋。
-                </div>
-                <br />
-                <div className="main-introduce-left-empolyment">
-                  A Front-end Developer &ensp;
-                  <span className="main-introduce-left-empolyment-duration">
-                    since 2020
-                  </span>
-                </div>
-                <br />
-                <div className="main-introduce-left-description">
-                  Welcome to my personal Space 💎
-                </div>
-                <div className="main-introduce-left-links">
-                  <div className="main-introduce-left-links-item">github</div>
-                  <div className="main-introduce-left-links-item">邮箱</div>
-                  <div>小红书</div>
-                </div>
+              <div className="main-introduce-left-greeting">
+                Hi, I'm
+                <span className="main-introduce-left-greeting__bold">
+                  &nbsp;Romy Zhang&nbsp;
+                </span>
+                👋。
+              </div>
+              <br />
+              <div className="main-introduce-left-empolyment">
+                A Front-end Developer &ensp;
+                <span className="main-introduce-left-empolyment__bold">
+                  &lt;since 2020 /&gt;
+                </span>
+              </div>
+              <br />
+              <div className="main-introduce-left-description">
+                Welcome to my personal Space 💎
+              </div>
+              <div className="main-introduce-left-links">
+                <div className="main-introduce-left-links-item">github</div>
+                <div className="main-introduce-left-links-item">邮箱</div>
+                <div>小红书</div>
               </div>
             </div>
             <div className="main-introduce-right">
-              <Image
-                priority={true}
-                src="/static/img/avatar.jpg"
-                alt=""
-                width={300}
-                height={300}
-              />
+              <div className="main-introduce-right-img"></div>
+              <div className="img-border-1"></div>
+              <div className="img-border-2"></div>
             </div>
           </div>
           <div className="main-guide">
