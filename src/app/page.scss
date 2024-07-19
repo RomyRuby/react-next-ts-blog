@@ -1,6 +1,6 @@
 .main {
   position: relative;
-
+  height: 100%;
   .main-home {
     position: relative;
     height: 100vh;
@@ -14,6 +14,7 @@
         .main-introduce-left-greeting {
           font-weight: 200;
           font-size: 32px;
+          animation: puase-hidden 0.4s linear;
           &__bold {
             font-weight: 500;
           }
@@ -22,6 +23,8 @@
           font-weight: 200;
           font-size: 32px;
           line-height: 48px;
+          animation: puase-hidden 0.8s linear,
+            enter-from-bottom 0.8s linear 0.8s;
           &__bold {
             position: relative;
             padding: 4px;
@@ -56,9 +59,30 @@
             }
           }
         }
+        .main-introduce-left-description {
+          animation: puase-hidden 1.6s linear,
+            enter-from-bottom 0.8s linear 1.6s;
+        }
         .main-introduce-left-links {
           margin-top: 98px;
           display: flex;
+          animation: puase-hidden 1.6s linear,
+            enter-from-bottom 0.8s linear 1.6s;
+          .main-introduce-left-links-item {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+          }
+          .black {
+            background: rgb(24, 23, 23);
+          }
+          .red {
+            background: rgb(0, 136, 204);
+          }
         }
       }
       .main-introduce-right {
@@ -184,6 +208,8 @@
       position: absolute;
       bottom: 0;
       text-align: center;
+      animation: enter-from-bottom 0.8s linear;
+
       .main-guide-arrow {
         margin-top: 16px;
       }
@@ -198,6 +224,8 @@
     grid-template-columns: 50% 50%;
     max-width: 1200px;
     min-width: 940px;
+    animation: enter-from-bottom 0.8s linear;
+
     .main-article-content {
       position: relative;
       width: 90%;

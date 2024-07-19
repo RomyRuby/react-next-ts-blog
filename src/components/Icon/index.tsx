@@ -1,6 +1,6 @@
-import icons from "@/components/icon/iconSvg";
+import icons from "@/components/Icon/iconSvg";
 import { ReactNode } from "react";
-import "./icon.scss";
+import "./index.scss";
 
 type params = {
   name: string;

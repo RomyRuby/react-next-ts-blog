@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Markdown from "@/components/markdown";
+import Markdown from "@/components/Markdown";
 
 const Articles = () => {
   const [content, setContent] = useState("");

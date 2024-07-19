@@ -1,6 +1,6 @@
-import "./Navbar.scss";
 import Link from "next/link";
-import Icon from "@/components/icon/Icon";
+import Icon from "@/components/Icon/index";
+import "./index.scss";
 
 const Navbar = () => {
   return (

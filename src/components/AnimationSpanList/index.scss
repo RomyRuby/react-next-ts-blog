@@ -1,0 +1,37 @@
+.animation-span-list {
+  display: flex;
+  .animation-span-list-item {
+    &__bold {
+      position: relative;
+      padding: 0 4px;
+      border-radius: 4px;
+      &::after {
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        content: "";
+        display: none;
+        width: 1px;
+        height: 28px;
+        background-color: var(--font-main-color);
+        animation: twinkle 1s linear infinite;
+
+        @keyframes twinkle {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        transition: all 0.2s;
+        background: rgb(229 231 235);
+        &::after {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

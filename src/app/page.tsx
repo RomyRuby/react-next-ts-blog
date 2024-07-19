@@ -1,24 +1,26 @@
-// "use client";
+"use client";
 import "./page.scss";
 import Image from "next/image";
-import Icon from "@/components/icon/Icon";
+import Icon from "@/components/Icon/index";
+import Link from "next/link";
+import AnimationSpanList from "@/components/AnimationSpanList";
 import { getPosts, getPost } from "@/lib/data";
-import * as request from "@/api/user";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { cookies } from "next/headers";
+import * as request from "@/api/user";
 import axios from "axios";
 
-export const metadata = {
-  title: "Romy Zhang",
-  description: "Romy Zhang's blog",
-};
+// export const metadata = {
+//   title: "Romy Zhang",
+//   description: "Romy Zhang's blog",
+// };
 
-const getUser = async () => {
-  const cookieStore = cookies();
-  const token = cookieStore.get("token")?.value;
-  const value = token ? token : "";
-  const res = await request.getUserInfo(value);
-};
+// const getUser = async () => {
+//   const cookieStore = cookies();
+//   const token = cookieStore.get("token")?.value;
+//   const value = token ? token : "";
+//   const res = await request.getUserInfo(value);
+// };
 
 const Home = () => {
   return (
@@ -28,27 +30,37 @@ const Home = () => {
           <div className="main-introduce">
             <div className="main-introduce-left">
               <div className="main-introduce-left-greeting">
-                Hi, I'm
-                <span className="main-introduce-left-greeting__bold">
-                  &nbsp;Romy Zhang&nbsp;
-                </span>
-                👋。
+                <AnimationSpanList
+                  str="Hi,&nbsp;I'm"
+                  boldStr="&nbsp;Romy&nbsp;Zhang "
+                  strClassName="main-introduce-left-greeting"
+                />
               </div>
               <br />
               <div className="main-introduce-left-empolyment">
-                A Front-end Developer &ensp;
-                <span className="main-introduce-left-empolyment__bold">
-                  &lt;since 2020 /&gt;
-                </span>
+                <AnimationSpanList
+                  str="A&nbsp;Front-end&nbsp;Developer&ensp;"
+                  boldStr="&lt;since&nbsp;2020&nbsp;/&gt;"
+                  strClassName="main-introduce-left-greeting"
+                  boldActive={true}
+                />
               </div>
               <br />
               <div className="main-introduce-left-description">
                 Welcome to my personal Space 💎
               </div>
               <div className="main-introduce-left-links">
-                <div className="main-introduce-left-links-item">github</div>
-                <div className="main-introduce-left-links-item">邮箱</div>
-                <div>小红书</div>
+                <a
+                  className="main-introduce-left-links-item black"
+                  href="https://github.com/RomyRuby"
+                  target="_blank"
+                >
+                  <Icon name="github" size={21} />
+                </a>
+
+                <div className="main-introduce-left-links-item red">
+                  <Icon name="email" size={21} />
+                </div>
               </div>
             </div>
             <div className="main-introduce-right">
