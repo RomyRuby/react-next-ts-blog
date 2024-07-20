@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Icon from "@/components/Icon/index";
+import { Scroll } from "@/types/global";
 import "./index.scss";
 
-const Navbar = () => {
+type NavbarParams = {} & Scroll;
+
+const Navbar = ({ scrollTop }: NavbarParams) => {
   return (
-    <div className="layout-navbar-wrap">
+    <div
+      className={`layout-navbar-wrap ${
+        Number(scrollTop) > 165 ? "layout-navbar-wrap__active" : ""
+      }`}
+    >
       <div className="layout-navbar">
         <div className="layout-navbar-avatar">
           <Link className="layout-navbar-avatar-icon" href="/"></Link>

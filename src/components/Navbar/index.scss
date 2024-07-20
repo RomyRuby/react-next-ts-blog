@@ -1,17 +1,28 @@
 .layout-navbar-wrap {
+  position: relative;
+  position: fixed;
+  z-index: 100;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 63px;
+
+  &__active {
+    transition: all 0.3s;
+    border-bottom: 1px solid #bbb3;
+    background-color: #ffffffb8;
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
   .layout-navbar {
-    position: fixed;
-    width: 1064px;
+    width: 1120px;
     height: 63px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-
     .layout-navbar-avatar {
       width: 60px;
       display: flex;

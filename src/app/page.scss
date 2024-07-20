@@ -1,6 +1,7 @@
 .main {
   position: relative;
   height: 100%;
+  overflow: hidden;
   .main-home {
     position: relative;
     height: 100vh;
@@ -218,7 +219,7 @@
 
   .main-article {
     position: relative;
-    margin: 84px auto 0 auto;
+    margin: 100px auto 0 auto;
     position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -289,7 +290,7 @@
   }
 
   .main-album {
-    margin: 84px auto 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 1200px;
     min-width: 940px;
     .main-album-title {

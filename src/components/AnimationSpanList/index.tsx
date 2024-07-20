@@ -1,22 +1,22 @@
+import { useMemo } from "react";
 import "./index.scss";
 
-const AnimationSpanList = ({
-  str,
-  boldStr,
-  strClassName,
-  boldActive = false,
-}: {
+type AnimationSpanListParams = {
   str: string;
   boldStr: string;
   strClassName: string;
   boldActive?: boolean;
-}) => {
+};
+
+const AnimationSpanList = (params: AnimationSpanListParams) => {
+  const { str, boldStr, strClassName, boldActive } = params;
+
   const StrArr = () =>
     str.split("").map((element: string, index: number) => {
       return (
         <span
           className={strClassName}
-          key={strClassName + element + index + Math.random()}
+          key={strClassName + element + index}
           style={{
             display: "inline-block",
             animation: `puase-hidden ${
@@ -33,7 +33,7 @@ const AnimationSpanList = ({
       return (
         <span
           className={strClassName + "__bold"}
-          key={strClassName + "__bold" + element + index + Math.random()}
+          key={strClassName + "__bold" + element}
           style={{
             display: "inline-block",
             animation: `puase-hidden ${
