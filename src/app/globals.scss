@@ -16,12 +16,13 @@ body {
   font-size: 14px;
   color: var(--font-main-color);
   background: linear-gradient(180deg, #fafafc 0%, #f1f1f8 50%, #f0f1f8 100%);
+  overflow-y: auto;
+  overflow-x: hidden;
   .page {
     position: relative;
     height: 100vh;
     min-width: 1366px;
     min-height: 700px;
-    overflow: auto;
     box-sizing: border-box;
   }
 }

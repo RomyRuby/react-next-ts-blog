@@ -33,7 +33,7 @@ const AnimationSpanList = (params: AnimationSpanListParams) => {
       return (
         <span
           className={strClassName + "__bold"}
-          key={strClassName + "__bold" + element}
+          key={strClassName + "__bold" + element + index}
           style={{
             display: "inline-block",
             animation: `puase-hidden ${

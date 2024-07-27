@@ -224,13 +224,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
     max-width: 1200px;
-    min-width: 940px;
     animation: enter-from-bottom 0.8s linear;
 
     .main-article-content {
       position: relative;
       width: 90%;
-      margin: auto;
+      margin: 0 auto;
       .main-article-title {
         font-size: 22px;
         font-weight: 500;

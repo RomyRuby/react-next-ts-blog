@@ -1,15 +1,29 @@
+"use client";
 import Link from "next/link";
 import Icon from "@/components/Icon/index";
-import { Scroll } from "@/types/global";
 import "./index.scss";
+import { useEffect, useState } from "react";
 
-type NavbarParams = {} & Scroll;
+const Navbar = () => {
+  const [backgroudnActive, setBackgroundActive] = useState(false);
+  useEffect(() => {
+    const scollComputed = (e: Event) => {
+      if ((e.target as HTMLElement).scrollTop > 160) {
+        setBackgroundActive(true);
+      } else {
+        setBackgroundActive(false);
+      }
+    };
 
-const Navbar = ({ scrollTop }: NavbarParams) => {
+    document.body.addEventListener("scroll", scollComputed);
+
+    return () => document.body.removeEventListener("scroll", scollComputed);
+  }, []);
+
   return (
     <div
       className={`layout-navbar-wrap ${
-        Number(scrollTop) > 165 ? "layout-navbar-wrap__active" : ""
+        backgroudnActive ? "layout-navbar-wrap__active" : ""
       }`}
     >
       <div className="layout-navbar">

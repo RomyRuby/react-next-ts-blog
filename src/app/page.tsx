@@ -1,38 +1,37 @@
-// "use client";
+"use client";
 import "./page.scss";
 import Icon from "@/components/Icon/index";
 import AnimationSpanList from "@/components/AnimationSpanList";
-// import MyContext from "./context";
-// import { Scroll } from "@/types/global";
-// import { useEffect, useState, useContext } from "react";
 import * as request from "../api/user";
-import { cookies } from "next/headers";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  // const [articleVisible, setArticleVisible] = useState(false);
-  // const [albumVisible, setAlbumVisible] = useState(false);
+  const [articleVisible, setArticleVisible] = useState(false);
+  const [albumVisible, setAlbumVisible] = useState(false);
 
   const getUser = async () => {
-    // const cookie = cookies();
-    // const token = cookie.get("token")?.value ? cookie.get("token")?.value : "";
-    const res = await request.getUserInfo();
+    try {
+      const res = await request.getUserInfo();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  getUser();
+  useEffect(() => {
+    getUser();
+    const scollComputed = (e: Event) => {
+      if ((e.target as HTMLElement).scrollTop > 80) {
+        setArticleVisible(true);
+      }
+      if ((e.target as HTMLElement).scrollTop > 620) {
+        setAlbumVisible(true);
+      }
+    };
 
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
-  // const context = useContext(MyContext);
+    document.body.addEventListener("scroll", scollComputed);
 
-  // useEffect(() => {
-  //   if (context.scrollTop > 100) {
-  //     setArticleVisible(true);
-  //   }
-  //   if (context.scrollTop > 600) {
-  //     setAlbumVisible(true);
-  //   }
-  // }, [context.scrollTop]);
+    return () => document.body.removeEventListener("scroll", scollComputed);
+  }, []);
 
   return (
     <>
@@ -90,7 +89,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* {articleVisible && (
+        {articleVisible && (
           <div className="main-article">
             <div className="main-article-content">
               <div className="main-article-title">最近更新的笔记</div>
@@ -258,7 +257,7 @@ const Home = () => {
             <div className="main-album-title">世间只是一些影影绰绰的温柔</div>
             <div className="main-album-list">111</div>
           </div>
-        )} */}
+        )}
 
         <div className="main-end">
           <div className="main-end-guide">可以绕行，狐疑，留在原地</div>

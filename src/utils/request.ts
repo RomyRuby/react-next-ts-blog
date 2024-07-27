@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import Cookies from "js-cookie";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 
 const request = axios.create({
   withCredentials: true
