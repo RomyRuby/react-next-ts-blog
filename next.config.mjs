@@ -7,7 +7,8 @@ const nextConfig = {
         hostname: 'img1.baidu.com'
       }
     ]
-  }
+  },
+  output: 'standalone',
 };
 
 export default nextConfig;
