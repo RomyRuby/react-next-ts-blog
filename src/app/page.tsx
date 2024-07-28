@@ -11,7 +11,7 @@ const Home = () => {
 
   const getUser = async () => {
     try {
-      const res = await request.getUserInfo();
+      await request.getUserInfo();
     } catch (error) {
       console.log(error);
     }

@@ -1,31 +1,20 @@
 
 import axios from "axios";
 import Cookies from "js-cookie";
-// import { cookies } from "next/headers";
 
 const request = axios.create({
   withCredentials: true
 });
 
-
 const checkIsServer = () => typeof window == 'undefined';
-
-
-const getToken = () => {
-  let token = '';
-  if (checkIsServer()) {
-    token = cookies().get('token')?.value || '';
-  } else {
-    token = Cookies.get("token") || ''
-  }
-  return token
-}
 
 // 添加请求拦截器
 request.interceptors.request.use(
   function (config) {
-    const token = getToken()
-    config.headers['Authorization'] = token;
+    if (!checkIsServer()) {
+      config.headers['Authorization'] = Cookies.get("token") || '';
+    }
+
     return config;
   },
   function (error) {
