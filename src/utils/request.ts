@@ -6,6 +6,8 @@ const request = axios.create({
   withCredentials: true
 });
 
+console.log('create axios');
+
 const checkIsServer = () => typeof window == 'undefined';
 
 // 添加请求拦截器
