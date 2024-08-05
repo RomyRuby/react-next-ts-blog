@@ -6,16 +6,12 @@ const request = axios.create({
   withCredentials: true
 });
 
-console.log('create axios');
 
-const checkIsServer = () => typeof window == 'undefined';
+// const checkIsServer = () => typeof window == 'undefined';
 
 // 添加请求拦截器
 request.interceptors.request.use(
   function (config) {
-    if (!checkIsServer()) {
-      config.headers['Authorization'] = Cookies.get("token") || '';
-    }
 
     return config;
   },

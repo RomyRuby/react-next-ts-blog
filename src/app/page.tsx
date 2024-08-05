@@ -3,22 +3,15 @@ import "./page.scss";
 import Icon from "@/components/Icon/index";
 import AnimationSpanList from "@/components/AnimationSpanList";
 import * as request from "../api/user";
+import { Button, Modal } from "antd";
 import { useEffect, useState } from "react";
 
 const Home = () => {
   const [articleVisible, setArticleVisible] = useState(false);
   const [albumVisible, setAlbumVisible] = useState(false);
-
-  const getUser = async () => {
-    try {
-      await request.getUserInfo();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    getUser();
     const scollComputed = (e: Event) => {
       if ((e.target as HTMLElement).scrollTop > 80) {
         setArticleVisible(true);
@@ -32,6 +25,18 @@ const Home = () => {
 
     return () => document.body.removeEventListener("scroll", scollComputed);
   }, []);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -59,20 +64,41 @@ const Home = () => {
               <div className="main-introduce-left-description">
                 Welcome to my personal Space 💎
               </div>
+              {/* 左边的按钮 */}
               <div className="main-introduce-left-links">
                 <a
-                  className="main-introduce-left-links-item black"
+                  className="main-introduce-left-links-item github"
                   href="https://github.com/RomyRuby"
                   target="_blank"
                 >
                   <Icon name="github" size={21} />
                 </a>
 
-                <div className="main-introduce-left-links-item red">
+                <div className="main-introduce-left-links-item email">
                   <Icon name="email" size={21} />
                 </div>
+
+                <Button
+                  className="main-introduce-left-links-item chat"
+                  type="primary"
+                  onClick={showModal}
+                >
+                  和我聊天
+                </Button>
+
+                <Modal
+                  title="Basic Modal"
+                  open={isModalOpen}
+                  onOk={handleOk}
+                  onCancel={handleCancel}
+                >
+                  <p>Some contents...</p>
+                  <p>Some contents...</p>
+                  <p>Some contents...</p>
+                </Modal>
               </div>
             </div>
+            {/* 右边的大头像 */}
             <div className="main-introduce-right">
               <div className="main-introduce-right-img"></div>
               <div className="img-border-1"></div>
