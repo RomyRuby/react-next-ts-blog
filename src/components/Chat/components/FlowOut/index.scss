@@ -1,0 +1,90 @@
+.bubble-loading {
+  width: 36px;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .bubble-loading-point {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #aeb3be;
+    border-radius: 3px;
+  }
+
+  .colorChange1 {
+    animation: colorChange1 1s linear infinite;
+    transition-duration: 0.25s, 1s;
+  }
+
+  .colorChange2 {
+    animation: colorChange2 1s linear infinite;
+    transition-duration: 0.25s, 1s;
+  }
+
+  .colorChange3 {
+    animation: colorChange3 1s linear infinite;
+    transition-duration: 0.25s, 1s;
+  }
+
+  @keyframes colorChange1 {
+    0% {
+      opacity: 1;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.2;
+    }
+
+    100% {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes colorChange2 {
+    0% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes colorChange3 {
+    0% {
+      opacity: 0.2;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.bubble-content__focus {
+  display: inline-block;
+  width: 12px;
+  height: 15px;
+  border-bottom: 2px solid #1d1d21;
+  animation: focus 0.8s linear infinite;
+  transition-duration: 0.25s, 1s;
+}

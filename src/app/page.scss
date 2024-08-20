@@ -5,6 +5,7 @@
   .main-home {
     position: relative;
     height: 100vh;
+    min-height: 700px;
     padding: calc(50vh - 170px) 0 0 0;
     box-sizing: border-box;
     .main-introduce {
@@ -41,15 +42,6 @@
               height: 28px;
               background-color: var(--font-main-color);
               animation: twinkle 1s linear infinite;
-
-              @keyframes twinkle {
-                0% {
-                  opacity: 0;
-                }
-                100% {
-                  opacity: 1;
-                }
-              }
             }
             &:hover {
               transition: all 0.2s;
@@ -82,7 +74,16 @@
             background: rgb(24, 23, 23);
           }
           .email {
-            background: rgb(0, 136, 204);
+            background: #383998;
+          }
+
+          .wechat {
+            background-color: #ffffff;
+          }
+
+          .aichat {
+            background-image: url("/static/img/AI.jpg");
+            background-size: 100% 100%;
           }
         }
       }
@@ -90,6 +91,7 @@
         position: relative;
         margin-left: 17%;
         .main-introduce-right-img {
+          cursor: pointer;
           position: relative;
           z-index: 10;
           width: 300px;
@@ -99,27 +101,7 @@
           background-image: url("../../static/img/avatar.jpg");
           animation: shake 2.5s linear infinite;
         }
-        @keyframes shake {
-          0% {
-            transform: translate(0, 0);
-          }
 
-          25% {
-            transform: translate(2px, -2px);
-          }
-
-          50% {
-            transform: translate(0, 0);
-          }
-
-          75% {
-            transform: translate(-2px, -2px);
-          }
-
-          100% {
-            transform: translate(0, 0);
-          }
-        }
         .img-border-1 {
           position: absolute;
           z-index: 8;
@@ -157,50 +139,6 @@
           border-radius: 50%;
           animation: lianyi-2 2.5s linear infinite;
         }
-
-        @keyframes lianyi-1 {
-          0% {
-            transform: translate(-50%, -50%) scale(0.5);
-            opacity: 0.08;
-          }
-
-          50% {
-            transform: translate(-50%, -50%) scale(0.9);
-            opacity: 0.14;
-          }
-
-          83% {
-            transform: translate(-50%, -50%) scale(1.1);
-            opacity: 0.08;
-          }
-
-          100% {
-            transform: translate(-50%, -50%) scale(1.2);
-            opacity: 0;
-          }
-        }
-
-        @keyframes lianyi-2 {
-          0% {
-            transform: translate(-50%, -50%) scale(0.5);
-            opacity: 0.01;
-          }
-
-          50% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.06;
-          }
-
-          80% {
-            transform: translate(-50%, -50%) scale(1.1);
-            opacity: 0.03;
-          }
-
-          100% {
-            transform: translate(-50%, -50%) scale(1.2);
-            opacity: 0;
-          }
-        }
       }
     }
     .main-guide {
@@ -213,6 +151,7 @@
 
       .main-guide-arrow {
         margin-top: 16px;
+        animation: up-down 1s infinite linear;
       }
     }
   }
@@ -313,5 +252,103 @@
     .main-end-guide {
       font-size: 18px;
     }
+  }
+}
+
+.main-introduce-right-img-popover {
+  span {
+    opacity: 0.2;
+  }
+}
+
+// 以下是动画
+@keyframes lianyi-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.08;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.14;
+  }
+
+  83% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.08;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes lianyi-2 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.01;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.06;
+  }
+
+  80% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.03;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(2px, -2px);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(-2px, -2px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(6px);
+  }
+
+  75% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

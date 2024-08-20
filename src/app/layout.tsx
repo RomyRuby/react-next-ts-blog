@@ -2,7 +2,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer/index";
-
 import "./tailwind.css";
 import "./globalReset.scss";
 import "./globals.scss";

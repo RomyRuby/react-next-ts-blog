@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [backgroudnActive, setBackgroundActive] = useState(false);
+
   useEffect(() => {
     const scollComputed = (e: Event) => {
       if ((e.target as HTMLElement).scrollTop > 160) {
