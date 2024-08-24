@@ -17,7 +17,7 @@ export default async function RootLayout({
         <div className="page w-full">
           <Navbar />
           <div className="page-content">{children}</div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>

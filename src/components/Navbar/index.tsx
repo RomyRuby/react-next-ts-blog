@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
           <div className="layout-navbar-nav-item">
             <Icon name="time" />
-            <span className="layout-navbar-nav-item-text"> 时光</span>
+            <span className="layout-navbar-nav-item-text"> AI</span>
           </div>
         </div>
         <div className="layout-navbar-user">

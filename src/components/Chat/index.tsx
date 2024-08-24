@@ -39,15 +39,15 @@ const Chat = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (chatList.length === 0) {
-  //     const chat = createAiMessage(
-  //       "你好！我是Romy Zhang，一名前端开发程序员。很高兴在虚拟世界与你相遇！如果你有关于前端开发的问题或者需要一些建议，无论是关于HTML、CSS、JavaScript还是React、Vue等框架，我都会尽力帮助你。无论是新手入门还是解决具体的技术难题，都可以来聊聊哦。 如果你对某个特定的前端技术或项目有疑问，不妨详细描述一下，我们可以一起探讨解决方案。无论是网站布局、交互设计，还是性能优化、跨浏览器兼容性问题，我都乐于分享我的经验和见解。让我们一起在这个充满创造性和挑战的领域里成长吧！"
-  //     );
-  //     const newChatList = chatList.concat([chat]);
-  //     setChatList(newChatList);
-  //   }
-  // }, [chatList]);
+  useEffect(() => {
+    if (chatList.length === 0) {
+      const chat = createAiMessage(
+        "Hi, 我是***AI Romy***，一名前端开发工程师。\n\n\n我在网页应用的设计和实现方面有着深厚的热情，喜欢通过代码将创意变为现实。我的目标是打造既美观又实用的产品，为用户提供最佳的体验。\n\n如果你对前端技术感兴趣，或者只是想聊聊最新的开发趋势，欢迎随时找我聊天！"
+      );
+      const newChatList = chatList.concat([chat]);
+      setChatList(newChatList);
+    }
+  }, [chatList]);
 
   useEffect(() => {
     if (input === "") {

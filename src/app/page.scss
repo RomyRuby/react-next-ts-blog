@@ -8,6 +8,7 @@
     min-height: 700px;
     padding: calc(50vh - 170px) 0 0 0;
     box-sizing: border-box;
+    margin-bottom: 100px;
     .main-introduce {
       display: flex;
       justify-content: center;
@@ -158,12 +159,12 @@
 
   .main-article {
     position: relative;
-    margin: 100px auto 0 auto;
+    margin: 100px auto 200px auto;
     position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
     max-width: 1200px;
-    animation: enter-from-bottom 0.8s linear;
+    animation: puase-hidden 0.4s linear, enter-from-bottom 0.8s 0.4s linear;
 
     .main-article-content {
       position: relative;
@@ -199,8 +200,24 @@
             }
           }
           .main-article-item-title {
+            display: inline-block;
             padding: 0 16px;
             line-height: 32px;
+            a {
+              background: linear-gradient(
+                var(--theme-color),
+                var(--theme-color)
+              );
+              text-decoration-line: none;
+              background-size: 0 2px;
+              background-repeat: no-repeat;
+              background-position: left bottom;
+
+              &:hover {
+                background-size: 100% 2px;
+                transition: all 0.5s ease;
+              }
+            }
           }
           .main-article-item-date {
             margin-left: auto;
@@ -230,18 +247,17 @@
   .main-album {
     margin: 100px auto 0 auto;
     max-width: 1200px;
-    min-width: 940px;
+    animation: puase-hidden 0.4s, enter-from-bottom 0.8s 0.4s linear;
+
     .main-album-title {
-      width: 90%;
       margin: auto;
       font-size: 22px;
       font-weight: 500;
     }
     .main-album-list {
-      width: 90%;
-      margin: auto;
       margin-top: 24px;
       height: 160px;
+      display: flex;
     }
   }
 
