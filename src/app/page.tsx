@@ -47,6 +47,10 @@ const Home = () => {
   const handleSetCard = (status: boolean, type: string = "") => {
     setIsCardOpen(status);
     setCardType(type);
+    if (status && type === "email") {
+      const mailtoLink = `mailto:846261434@qq.com}`;
+      window.location.href = mailtoLink;
+    }
   };
   const fetchArticles = async () => {
     try {
