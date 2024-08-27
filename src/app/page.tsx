@@ -23,19 +23,11 @@ const Home = () => {
 
   useEffect(() => {
     fetchArticles();
-    // fetchPhotos();
 
     // 添加滚动监听
     const scollComputed = (e: Event) => {
       if ((e.target as HTMLElement).scrollTop > 90) {
         setArticleVisible(true);
-      }
-      if (
-        mainArticleRef.current?.clientHeight &&
-        (e.target as HTMLElement).scrollTop >
-          mainArticleRef.current?.clientHeight + 230
-      ) {
-        setEndVisible(true);
       }
     };
     document.body.addEventListener("scroll", scollComputed);
@@ -256,7 +248,6 @@ const Home = () => {
                 }
                 placement="top"
                 align={{ offset: [0, -30] }}
-                // open={!isModalOpen && !isCardOpen}
               >
                 <div
                   className="main-introduce-right-img"

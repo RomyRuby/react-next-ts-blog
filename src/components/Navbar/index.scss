@@ -85,3 +85,72 @@
     }
   }
 }
+
+.personal-modal {
+  width: 850px !important;
+  .ant-modal-content {
+    background-color: #fafafa;
+    padding: 32px;
+    border: 1px solid rgba(228, 228, 231);
+    box-shadow: 1px 10px 15px 0px rgba(228, 228, 231);
+    .ant-modal-close {
+      width: 24px;
+      height: 24px;
+      .ant-modal-close-x {
+        font-size: 12px;
+      }
+    }
+    .personal-modal-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      position: absolute;
+      top: -28px;
+      left: 401px;
+      background-image: url("/static/img/avatar.jpg");
+      background-size: 100% 100%;
+    }
+    .personal-modal-name {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.personal-intro {
+  margin-top: 24px;
+  .personal-intro-text {
+    line-height: 24px;
+  }
+  .personal-intro-imgs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 16px 0;
+  }
+
+  .text-box {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .text-box-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      margin: 0 4px 0 8px;
+    }
+
+    .text-box-copy {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+}
