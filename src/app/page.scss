@@ -63,6 +63,7 @@
           animation: puase-hidden 1.6s linear,
             enter-from-bottom 0.8s linear 1.6s;
           .main-introduce-left-links-item {
+            cursor: pointer;
             width: 35px;
             height: 35px;
             border-radius: 50%;
@@ -274,6 +275,71 @@
 .main-introduce-right-img-popover {
   span {
     opacity: 0.2;
+  }
+}
+
+.card-modal {
+  width: 350px !important;
+  .ant-modal-content {
+    background-color: #fafafa;
+    padding: 32px;
+    border: 1px solid rgba(228, 228, 231);
+    box-shadow: 1px 10px 15px 0px rgba(228, 228, 231);
+    .ant-modal-close {
+      width: 24px;
+      height: 24px;
+      .ant-modal-close-x {
+        font-size: 12px;
+      }
+    }
+    .card-modal-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      position: absolute;
+      top: -28px;
+      left: 143px;
+      background-image: url("/static/img/avatar.jpg");
+      background-size: 100% 100%;
+    }
+    .card-modal-name {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.wechat-img {
+  width: 284px;
+  height: 380px;
+  margin-top: 24px;
+  background-image: url("/static/img/wechat.jpg");
+  background-size: 100% 100%;
+}
+
+.email-box {
+  margin-top: 24px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 16px;
+  border-radius: 8px;
+  background-color: rgba(228, 228, 231, 0.6);
+  .email-box-icon {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #fafafacc;
+      border-radius: 4px;
+    }
   }
 }
 

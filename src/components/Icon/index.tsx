@@ -1,3 +1,5 @@
+"use client";
+
 import icons from "@/components/Icon/iconSvg";
 import { ReactNode } from "react";
 import "./index.scss";

@@ -1,3 +1,4 @@
+"use client";
 import { qwenChat } from "@/api/chat";
 import React, { useState, Fragment, useEffect, useRef } from "react";
 import { Button, Input } from "antd";
