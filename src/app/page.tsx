@@ -145,62 +145,11 @@ const Home = () => {
       <>
         {articleVisible && (
           <div className="main-article" ref={mainArticleRef}>
-            <div className="main-article-content">
-              <div className="main-article-title">最近更新的笔记</div>
-              <div className="main-article-list">{List}</div>
-              <div className="main-article-more">
-                <Icon name="circleRight" />
-                <span>还有更多</span>
-              </div>
-            </div>
-            <div className="main-article-content">
-              <div className="main-article-title">最近更新的日记</div>
-              <div className="main-article-list">
-                <div className="main-article-item">
-                  <div className="main-article-item-icon">
-                    <div className="main-article-item-icon-circle"></div>
-                    <div className="main-article-item-icon-line"></div>
-                  </div>
-                  <div className="main-article-item-title">
-                    人机交互：页面过渡动画和内容呈现
-                  </div>
-                  <div className="main-article-item-date">1 个月前</div>
-                </div>
-                <div className="main-article-item">
-                  <div className="main-article-item-icon">
-                    <div className="main-article-item-icon-circle"></div>
-                    <div className="main-article-item-icon-line"></div>
-                  </div>
-                  <div className="main-article-item-title">
-                    人机交互：页面过渡动画和内容呈现
-                  </div>
-                  <div className="main-article-item-date">1 个月前</div>
-                </div>
-                <div className="main-article-item">
-                  <div className="main-article-item-icon">
-                    <div className="main-article-item-icon-circle"></div>
-                    <div className="main-article-item-icon-line"></div>
-                  </div>
-                  <div className="main-article-item-title">
-                    人机交互：页面过渡动画和内容呈现
-                  </div>
-                  <div className="main-article-item-date">1 个月前</div>
-                </div>
-                <div className="main-article-item">
-                  <div className="main-article-item-icon">
-                    <div className="main-article-item-icon-circle"></div>
-                    <div className="main-article-item-icon-line"></div>
-                  </div>
-                  <div className="main-article-item-title">
-                    人机交互：页面过渡动画和内容呈现
-                  </div>
-                  <div className="main-article-item-date">1 个月前</div>
-                </div>
-              </div>
-              <div className="main-article-more">
-                <Icon name="circleRight" />
-                <span>还有更多</span>
-              </div>
+            <div className="main-article-title">最近更新的笔记</div>
+            <div className="main-article-list">{List}</div>
+            <div className="main-article-more">
+              <Icon name="circleRight" />
+              <span>还有更多</span>
             </div>
           </div>
         )}

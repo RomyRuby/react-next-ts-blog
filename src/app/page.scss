@@ -162,85 +162,75 @@
     position: relative;
     margin: 100px auto 200px auto;
     position: relative;
-    display: grid;
-    grid-template-columns: 50% 50%;
     max-width: 1200px;
     animation: puase-hidden 0.4s linear, enter-from-bottom 0.8s 0.4s linear;
-
-    .main-article-content {
-      position: relative;
-      width: 90%;
-      margin: 0 auto;
-      .main-article-title {
-        font-size: 22px;
-        font-weight: 500;
-      }
-      .main-article-list {
-        margin-top: 24px;
-        .main-article-item {
-          position: relative;
-          display: flex;
-          .main-article-item-icon {
-            width: 8px;
-            height: 24px;
-            position: absolute;
-            top: 12px;
-
-            .main-article-item-icon-circle {
-              margin: auto;
-              width: 8px;
-              height: 8px;
-              border-radius: 4px;
-              background-color: var(--theme-color);
-            }
-            .main-article-item-icon-line {
-              margin: auto;
-              width: 2px;
-              height: 24px;
-              background-color: var(--theme-color);
-            }
-          }
-          .main-article-item-title {
-            display: inline-block;
-            padding: 0 16px;
-            line-height: 32px;
-            a {
-              background: linear-gradient(
-                var(--theme-color),
-                var(--theme-color)
-              );
-              text-decoration-line: none;
-              background-size: 0 2px;
-              background-repeat: no-repeat;
-              background-position: left bottom;
-
-              &:hover {
-                background-size: 100% 2px;
-                transition: all 0.5s ease;
-              }
-            }
-          }
-          .main-article-item-date {
-            margin-left: auto;
-            font-size: 12px;
-            color: var(--font-sub-color);
-            line-height: 32px;
-          }
-          &:last-child {
-            .main-article-item-icon-line {
-              display: none;
-            }
-          }
-        }
-      }
-      .main-article-more {
+    width: 60%;
+    .main-article-title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .main-article-list {
+      margin-top: 24px;
+      .main-article-item {
+        position: relative;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 32px;
-        span {
-          margin-left: 8px;
+        .main-article-item-icon {
+          width: 8px;
+          height: 24px;
+          position: absolute;
+          top: 12px;
+
+          .main-article-item-icon-circle {
+            margin: auto;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: var(--theme-color);
+          }
+          .main-article-item-icon-line {
+            margin: auto;
+            width: 2px;
+            height: 24px;
+            background-color: var(--theme-color);
+          }
         }
+        .main-article-item-title {
+          display: inline-block;
+          padding: 0 16px;
+          line-height: 32px;
+          a {
+            background: linear-gradient(var(--theme-color), var(--theme-color));
+            text-decoration-line: none;
+            background-size: 0 2px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+
+            &:hover {
+              background-size: 100% 2px;
+              transition: all 0.5s ease;
+            }
+          }
+        }
+        .main-article-item-date {
+          margin-left: auto;
+          font-size: 12px;
+          color: var(--font-sub-color);
+          line-height: 32px;
+        }
+        &:last-child {
+          .main-article-item-icon-line {
+            display: none;
+          }
+        }
+      }
+    }
+    .main-article-more {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 32px;
+      span {
+        margin-left: 8px;
       }
     }
   }

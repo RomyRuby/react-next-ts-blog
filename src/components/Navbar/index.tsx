@@ -1,13 +1,15 @@
 "use client";
-import Link from "next/link";
-import Icon from "@/components/Icon/index";
-import "./index.scss";
 import { useEffect, useState } from "react";
 import { Modal, message } from "antd";
+import Link from "next/link";
+import Icon from "@/components/Icon/index";
+import LightSwitch from "../LightSwitch";
+import "./index.scss";
 
 const Navbar = () => {
   const [backgroudnActive, setBackgroundActive] = useState(false);
   const [isCardOpen, setIsCardOpen] = useState(false);
+  const [isLightOn, setIsLightOn] = useState(true);
 
   useEffect(() => {
     const scollComputed = (e: Event) => {
@@ -109,40 +111,19 @@ const Navbar = () => {
       <div className="layout-navbar">
         <div className="layout-navbar-avatar">
           <Link className="layout-navbar-avatar-icon" href="/"></Link>
+          <span>Romy </span>Space
         </div>
         <div className="layout-navbar-nav">
-          <div className="layout-navbar-nav-item">
-            <Icon name="home" />
-            <Link className="layout-navbar-nav-item-text" href="/">
-              首页
-            </Link>
-          </div>
-          <div className="layout-navbar-nav-item">
-            <Icon name="article" />
-            <Link className="layout-navbar-nav-item-text" href="/articles">
-              文稿
-            </Link>
-          </div>
-          <div className="layout-navbar-nav-item">
-            <Icon name="diary" />
-            <span className="layout-navbar-nav-item-text"> 日记</span>
-          </div>
-          <div className="layout-navbar-nav-item">
-            <Icon name="album" />
-            <span className="layout-navbar-nav-item-text"> 相册</span>
-          </div>
-          <div className="layout-navbar-nav-item">
-            <Icon name="time" />
-            <span className="layout-navbar-nav-item-text"> AI</span>
-          </div>
+          <Link className="layout-navbar-nav-item" href="/articles">
+            文章列表
+          </Link>
+          <div className="layout-navbar-nav-item">AI Chat</div>
         </div>
-        <div className="layout-navbar-user">
-          <div
-            className="layout-navbar-user-avatar"
-            onClick={() => handleSetCard(true)}
-          >
-            <Icon name="user" />
-          </div>
+        <div className="layout-navbar-light">
+          <LightSwitch
+            value={isLightOn}
+            onChange={(value: boolean) => setIsLightOn(value)}
+          />
         </div>
       </div>
 
