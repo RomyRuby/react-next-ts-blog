@@ -5,15 +5,18 @@ import Link from "next/link";
 import Icon from "@/components/Icon/index";
 import LightSwitch from "../LightSwitch";
 import "./index.scss";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [backgroudnActive, setBackgroundActive] = useState(false);
   const [isCardOpen, setIsCardOpen] = useState(false);
-  const [isLightOn, setIsLightOn] = useState(true);
+  const [isLightOn, setIsLightOn] = useState(
+    localStorage.getItem("lightOn") === "0" ? false : true
+  );
 
   useEffect(() => {
     const scollComputed = (e: Event) => {
-      if ((e.target as HTMLElement).scrollTop > 160) {
+      if ((e.target as HTMLElement).scrollTop > 120) {
         setBackgroundActive(true);
       } else {
         setBackgroundActive(false);
@@ -24,6 +27,16 @@ const Navbar = () => {
 
     return () => document.body.removeEventListener("scroll", scollComputed);
   }, []);
+
+  useEffect(() => {
+    if (isLightOn) {
+      localStorage.setItem("lightOn", "1");
+      document.body.classList.remove("dark");
+    } else {
+      localStorage.setItem("lightOn", "0");
+      document.body.classList.add("dark");
+    }
+  }, [isLightOn]);
 
   const handleCopy = async (text: string) => {
     try {
@@ -111,13 +124,14 @@ const Navbar = () => {
       <div className="layout-navbar">
         <div className="layout-navbar-avatar">
           <Link className="layout-navbar-avatar-icon" href="/"></Link>
-          <span>Romy </span>Space
+          <Link className="layout-navbar-avatar-title" href="/">
+            <span>Romy </span>Space
+          </Link>
         </div>
         <div className="layout-navbar-nav">
           <Link className="layout-navbar-nav-item" href="/articles">
             文章列表
           </Link>
-          <div className="layout-navbar-nav-item">AI Chat</div>
         </div>
         <div className="layout-navbar-light">
           <LightSwitch

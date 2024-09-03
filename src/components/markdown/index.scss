@@ -1,0 +1,55 @@
+.article-markdown {
+  h2 {
+    display: block;
+    font-size: 28px;
+    height: 48px;
+    line-height: 48px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 16px 0;
+  }
+  p {
+    font-size: 16px;
+    margin: 16px 0;
+  }
+  .code-container {
+    border-radius: 8px;
+    background-color: var(--markdown-code-body-color);
+    .code-container-header {
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+      background-color: var(--markdown-code-header-color);
+      border-radius: 8px;
+
+      .copy-button {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        color: var(--font-sub-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          transition: all 0.2s;
+          background-color: var(--background-sub-color);
+        }
+      }
+    }
+  }
+  .short-code {
+    border-radius: 4px;
+    padding: 2px 8px;
+    background-color: var(--markdown-code-header-color);
+    color: var(--font-sub-color);
+    margin: 0 4px;
+  }
+
+  .hljs-comment {
+    color: var(--font-sub-color);
+  }
+}

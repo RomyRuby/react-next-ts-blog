@@ -1,0 +1,35 @@
+.article-list-page {
+  position: relative;
+  padding-top: 60px;
+  min-height: calc(100vh - 86px);
+}
+.article-list {
+  width: 672px;
+  margin: 80px auto 0 auto;
+  .article-list-item {
+    display: block;
+    padding: 24px;
+    height: 107px;
+    text-decoration: none;
+    border-radius: 16px;
+    .article-list-item-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--font-main-color);
+    }
+    .article-list-item-date {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      color: var(--font-sub-color);
+      span {
+        margin-left: 4px;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: var(--background-third-color);
+    }
+  }
+}

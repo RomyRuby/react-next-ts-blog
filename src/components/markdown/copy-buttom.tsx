@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Icon from "../Icon";
+import { message } from "antd";
+import "./index.scss";
 
 const CopyButton = ({ id }: { id: string }) => {
   const [copied, setCopited] = useState(false);
@@ -11,26 +14,15 @@ const CopyButton = ({ id }: { id: string }) => {
       setTimeout(() => {
         setCopited(false);
       }, 1000);
+      message.success("copy success");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <button
-      onClick={onCopy}
-      className="inline-flex rounded-md p-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-custom-font-main"
-    >
-      <div className={`transition-all${copied ? "scale-0" : "scale-100"}`}>
-        copy
-      </div>
-      <div
-        className={`absolute transition-all ${
-          copied ? "scale-100" : "scale-0"
-        }`}
-      >
-        check
-      </div>
+    <button onClick={onCopy} className="copy-button">
+      <Icon name="copy" />
     </button>
   );
 };

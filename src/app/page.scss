@@ -1,6 +1,5 @@
 .main {
   position: relative;
-  height: 100%;
   overflow: hidden;
   .main-home {
     position: relative;
@@ -46,7 +45,7 @@
             }
             &:hover {
               transition: all 0.2s;
-              background: rgb(229 231 235);
+              background: var(--font-background-color);
               &::after {
                 display: inline-block;
               }
@@ -112,12 +111,7 @@
           top: 150px;
           left: 150px;
           transform: translate(-50%, -50%);
-          background: linear-gradient(
-            180deg,
-            rgba(71, 15, 239, 0.4) 0%,
-            rgba(49, 15, 239, 0.62) 68%,
-            rgba(37, 15, 239, 0.04) 100%
-          );
+          background: var(--circle-color);
           opacity: 0.1;
           border-radius: 50%;
           animation: lianyi-1 2.5s linear infinite;
@@ -131,12 +125,7 @@
           top: 150px;
           left: 150px;
           transform: translate(-50%, -50%);
-          background: linear-gradient(
-            180deg,
-            rgba(71, 15, 239, 0.4) 0%,
-            rgba(49, 15, 239, 0.62) 68%,
-            rgba(37, 15, 239, 0.04) 100%
-          );
+          background: var(--circle-color);
           opacity: 0.04;
           border-radius: 50%;
           animation: lianyi-2 2.5s linear infinite;
@@ -152,6 +141,7 @@
       animation: enter-from-bottom 0.8s linear;
 
       .main-guide-arrow {
+        color: var(--font-main-color);
         margin-top: 16px;
         animation: up-down 1s infinite linear;
       }
@@ -164,7 +154,7 @@
     position: relative;
     max-width: 1200px;
     animation: puase-hidden 0.4s linear, enter-from-bottom 0.8s 0.4s linear;
-    width: 60%;
+    width: 40%;
     .main-article-title {
       font-size: 22px;
       font-weight: 500;
@@ -198,14 +188,17 @@
           display: inline-block;
           padding: 0 16px;
           line-height: 32px;
+
           a {
             background: linear-gradient(var(--theme-color), var(--theme-color));
             text-decoration-line: none;
             background-size: 0 2px;
             background-repeat: no-repeat;
             background-position: left bottom;
+            color: var(--font-main-color);
 
             &:hover {
+              color: var(--font-main-color);
               background-size: 100% 2px;
               transition: all 0.5s ease;
             }
@@ -234,35 +227,10 @@
       }
     }
   }
-
-  .main-album {
-    margin: 100px auto 0 auto;
-    max-width: 1200px;
-    animation: puase-hidden 0.4s, enter-from-bottom 0.8s 0.4s linear;
-
-    .main-album-title {
-      margin: auto;
-      font-size: 22px;
-      font-weight: 500;
-    }
-    .main-album-list {
-      margin-top: 24px;
-      height: 160px;
-      display: flex;
-    }
-  }
-
-  .main-end {
-    margin-top: 84px;
-    text-align: center;
-
-    .main-end-guide {
-      font-size: 18px;
-    }
-  }
 }
 
 .main-introduce-right-img-popover {
+  cursor: pointer;
   span {
     opacity: 0.2;
   }

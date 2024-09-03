@@ -2,7 +2,7 @@
 import Icon from "@/components/Icon/index";
 import AnimationSpanList from "@/components/AnimationSpanList";
 import Chat from "@/components/Chat";
-import { Button, Popover, Modal, message } from "antd";
+import { Button, Popover, Modal, message, Tooltip } from "antd";
 import { useEffect, useMemo, useState, Fragment, useRef } from "react";
 import { articles } from "@/api/article";
 import { Article } from "@/types/article";
@@ -20,6 +20,7 @@ const Home = () => {
   const [articleList, setArticleList] = useState([]);
   const [cardType, setCardType] = useState("");
   const mainArticleRef = useRef<null | HTMLDivElement>(null);
+  const mainHomeRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     fetchArticles();
@@ -61,6 +62,16 @@ const Home = () => {
     }
   };
 
+  const scrollToArticle = () => {
+    setArticleVisible(true);
+    setTimeout(() => {
+      document.body.scrollTo({
+        behavior: "smooth",
+        top: mainHomeRef.current?.offsetHeight,
+      });
+    });
+  };
+
   // 自我介绍和外链组件
   const MainIntroduceLeft = useMemo(() => {
     return (
@@ -87,13 +98,15 @@ const Home = () => {
             Welcome to my personal Space 💎
           </div>
           <div className="main-introduce-left-links">
-            <a
-              className="main-introduce-left-links-item github"
-              href="https://github.com/RomyRuby"
-              target="_blank"
-            >
-              <Icon name="github" size={21} />
-            </a>
+            <Tooltip placement="bottom" title={"github"} arrow={false}>
+              <a
+                className="main-introduce-left-links-item github"
+                href="https://github.com/RomyRuby"
+                target="_blank"
+              >
+                <Icon name="github" size={21} />
+              </a>
+            </Tooltip>
 
             <div
               className="main-introduce-left-links-item email"
@@ -147,6 +160,7 @@ const Home = () => {
           <div className="main-article" ref={mainArticleRef}>
             <div className="main-article-title">最近更新的笔记</div>
             <div className="main-article-list">{List}</div>
+
             <div className="main-article-more">
               <Icon name="circleRight" />
               <span>还有更多</span>
@@ -187,7 +201,7 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <div className="main-home">
+        <div className="main-home" ref={mainHomeRef}>
           <div className="main-introduce">
             {/* 左边介绍和按钮 */}
             {MainIntroduceLeft}
@@ -195,7 +209,10 @@ const Home = () => {
             <div className="main-introduce-right">
               <Popover
                 content={
-                  <div className="main-introduce-right-img-popover">
+                  <div
+                    className="main-introduce-right-img-popover"
+                    onClick={showModal}
+                  >
                     Hi, AI Romy Here. Click To Chat<span> ▶ </span>
                   </div>
                 }
@@ -215,7 +232,7 @@ const Home = () => {
             <div className="main-guide-sentence">
               种一棵树最好的时机是十年前，其次是现在
             </div>
-            <div className="main-guide-arrow">
+            <div className="main-guide-arrow" onClick={() => scrollToArticle()}>
               <Icon name="arrowDown" />
             </div>
           </div>

@@ -1,6 +1,6 @@
+import "./loading.scss";
 const Loading = () => {
-  return <div>Loading</div>
-}
+  return <div className="loading-page"></div>;
+};
 
-
-export default Loading
+export default Loading;

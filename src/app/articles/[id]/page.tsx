@@ -21,7 +21,11 @@ const Page = ({ params }: { params: params }) => {
 
   return (
     <>
-      <Markdown content={article?.content!} />
+      <div className="article-page">
+        <div className="article-wrap">
+          <Markdown content={article?.content!} />
+        </div>
+      </div>
     </>
   );
 };

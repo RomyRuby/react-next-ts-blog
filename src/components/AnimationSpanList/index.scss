@@ -27,7 +27,7 @@
       }
       &:hover {
         transition: all 0.2s;
-        background: rgb(229 231 235);
+        background: var(--font-background-color);
         &::after {
           display: inline-block;
         }

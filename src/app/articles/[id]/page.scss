@@ -1,1 +1,11 @@
-
+.article-page {
+  position: relative;
+  min-height: calc(100vh - 86px);
+  background: var(--background-forth-color);
+  padding-top: 60px;
+  .article-wrap {
+    position: relative;
+    width: 920px;
+    margin: 120px auto auto auto;
+  }
+}
