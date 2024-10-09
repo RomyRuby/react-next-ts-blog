@@ -63,7 +63,7 @@
         color: var(--font-main-color);
         &:hover {
           text-decoration: none;
-          color: var(--theme-color);
+          color: var(--font-hover-color);
         }
       }
     }
@@ -135,6 +135,23 @@
       width: 16px;
       height: 16px;
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .layout-navbar {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .layout-navbar {
+    width: 90% !important;
+    .layout-navbar-avatar {
+      .layout-navbar-avatar-title {
+        display: none;
+      }
     }
   }
 }

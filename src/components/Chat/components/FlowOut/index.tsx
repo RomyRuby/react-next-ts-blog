@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 // import ReactMarkdown from "react-markdown";
 import Markdown from "@/components/Markdown";
 import "./index.scss";
@@ -23,14 +23,8 @@ const FlowOut = ({
     setContentArray(content.split(""));
   }, [content]);
 
-  useEffect(() => {
-    if (contentArray.length != 0) {
-      flowOutput();
-    }
-  }, [contentArray]);
-
   // 流式输出;
-  const flowOutput = () => {
+  const flowOutput = useCallback(() => {
     let currentCursor = 0;
     let content = "";
 
@@ -54,7 +48,13 @@ const FlowOut = ({
         }
       }, 40);
     }
-  };
+  }, [contentArray, onFlowing, onFlowed]);
+
+  useEffect(() => {
+    if (contentArray.length != 0) {
+      flowOutput();
+    }
+  }, [contentArray, flowOutput]);
 
   const Loading = () => {
     return (

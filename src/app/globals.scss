@@ -3,6 +3,7 @@
   --font-main-color: #27264d;
   --font-sub-color: #8c8da9;
   --font-third-color: #8c8da9;
+  --font-hover-color: #5667f1;
   --font-main-size: 14px;
   --font-background-color: rgb(229, 231, 235);
   --divider-main-color: #e2e3e9;
@@ -15,8 +16,8 @@
     #f0f1f8 100%
   );
   --background-sub-color: #ffffffb8;
-  --background-third-color: rgba(86, 103, 241, 0.1);
-  --background-forth-color: linear-gradient(
+  --background-active-color: rgba(86, 103, 241, 0.1);
+  --background-article-color: linear-gradient(
     180deg,
     rgba(86, 103, 241, 0.1) 0%,
     #fafafc 15%,
@@ -36,25 +37,20 @@
 }
 
 .dark {
-  --theme-color: #5667f1;
+  --theme-color: #c7cdff;
   --font-main-color: oklch(1 0 0);
   --font-sub-color: oklch(100% 0 0 / 0.6);
   --font-third-color: #ffffff;
+  --font-hover-color: #c7cdff;
   --font-main-size: 14px;
   --font-background-color: rgba(229, 231, 235, 0.4);
-
   --divider-main-color: #e2e3e9;
   --divider-sub-color: rgba(60, 60, 60, 0.29);
   --divider-third-color: rgba(187, 187, 187, 0.2);
   --background-main-color: #0f1f24;
-  --background-sub-color: #1d1d1fb8;
-  --background-third-color: rgba(229, 231, 235, 0.1);
-  --background-forth-color: linear-gradient(
-    180deg,
-    rgba(86, 103, 241, 0.1) 0%,
-    #0f1f24 45%,
-    #1d1d1fb8 100%
-  );
+  --background-sub-color: rgba(44, 44, 44, 0.6);
+  --background-active-color: rgba(229, 231, 235, 0.1);
+  --background-article-color: #0f1f24;
   --circle-color: linear-gradient(
     180deg,
     rgba(195, 177, 255, 0.998) 0%,
@@ -75,8 +71,8 @@ body {
   .page {
     position: relative;
     height: 100vh;
-    min-width: 1366px;
-    min-height: 700px;
+    // min-width: 1366px;
+    // min-height: 700px;
     box-sizing: border-box;
   }
 }
@@ -137,7 +133,35 @@ code {
   }
 }
 
-@keyframes puase-hidden {
+// css动画
+@keyframes enter-from-bottom-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(calc(100% - 60px));
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  80% {
+    opacity: 0.9;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pause-hidden {
   0% {
     opacity: 0;
   }

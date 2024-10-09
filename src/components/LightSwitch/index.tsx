@@ -19,8 +19,8 @@ const LightSwitch = ({
         }}
       >
         <div className="light-switch-check">
-          {value && <Icon name="sun" size={12} />}
           {!value && <Icon name="moon" size={12} />}
+          {value && <Icon name="sun" size={12} />}
         </div>
       </div>
     </>

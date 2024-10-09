@@ -4,6 +4,7 @@ import AnimationSpanList from "@/components/AnimationSpanList";
 import Chat from "@/components/Chat";
 import { Button, Popover, Modal, message, Tooltip } from "antd";
 import { useEffect, useMemo, useState, Fragment, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { articles } from "@/api/article";
 import { Article } from "@/types/article";
 import Link from "next/link";
@@ -21,7 +22,7 @@ const Home = () => {
   const [cardType, setCardType] = useState("");
   const mainArticleRef = useRef<null | HTMLDivElement>(null);
   const mainHomeRef = useRef<null | HTMLDivElement>(null);
-
+  const router = useRouter();
   useEffect(() => {
     fetchArticles();
 
@@ -70,6 +71,10 @@ const Home = () => {
         top: mainHomeRef.current?.offsetHeight,
       });
     });
+  };
+
+  const handleNavigateTo = (url: string) => {
+    router.push(url);
   };
 
   // 自我介绍和外链组件
@@ -131,7 +136,7 @@ const Home = () => {
         </div>
       </>
     );
-  }, [MainIntroduceLeftFlag]);
+  }, []);
 
   // 文章组件
   const MainArticles = useMemo(() => {
@@ -161,15 +166,20 @@ const Home = () => {
             <div className="main-article-title">最近更新的笔记</div>
             <div className="main-article-list">{List}</div>
 
-            <div className="main-article-more">
-              <Icon name="circleRight" />
+            <div
+              className="main-article-more"
+              onClick={() => handleNavigateTo("/articles")}
+            >
+              <div className="main-article-more-icon">
+                <Icon name="circleRight" size={16} />
+              </div>
               <span>还有更多</span>
             </div>
           </div>
         )}
       </>
     );
-  }, [articleVisible]);
+  }, [articleVisible, articleList]);
 
   const handleCopy = async (text: string) => {
     try {
@@ -219,20 +229,22 @@ const Home = () => {
                 placement="top"
                 align={{ offset: [0, -30] }}
               >
-                <div
-                  className="main-introduce-right-img"
-                  onClick={showModal}
-                ></div>
-                <div className="img-border-1"></div>
-                <div className="img-border-2"></div>
+                <div className="main-introduce-right-img-wrap">
+                  <div
+                    className="main-introduce-right-img"
+                    onClick={showModal}
+                  ></div>
+                  <div className="img-border-1"></div>
+                  <div className="img-border-2"></div>
+                </div>
               </Popover>
             </div>
           </div>
-          <div className="main-guide">
+          <div className="main-guide" onClick={() => scrollToArticle()}>
             <div className="main-guide-sentence">
               种一棵树最好的时机是十年前，其次是现在
             </div>
-            <div className="main-guide-arrow" onClick={() => scrollToArticle()}>
+            <div className="main-guide-arrow">
               <Icon name="arrowDown" />
             </div>
           </div>
