@@ -26,7 +26,8 @@
 
     .ant-modal-body {
       height: calc(100% - 64px);
-      border-radius: 16px;
+      border-radius: 0 0 16px 16px;
+      background-color: var(--modal-body-background);
       .chat {
         height: 100%;
         display: flex;
@@ -52,6 +53,7 @@
             text-align: left;
             animation: fade-in 0.5s;
             .user-bubble-content {
+              color: #27264d;
               background-color: #e0dfff;
               border-radius: 12px 2px 12px 12px;
               line-height: 24px;

@@ -32,8 +32,9 @@
     }
 
     &:hover {
+      transition: all 0.2s;
       text-decoration: none;
-      background-color: var(--background-third-color);
+      background-color: var(--background-hover-color);
     }
   }
 }
