@@ -9,12 +9,15 @@
     font-weight: 500;
     margin: 32px 0 0 0;
   }
-  p {
+  p,
+  li {
     font-size: 16px;
     margin: 8px 0;
-    text-indent: 2em;
+    line-height: 28px;
   }
+
   .code-container {
+    margin: 32px 0;
     border-radius: 8px;
     background-color: var(--markdown-code-body-color);
     .code-container-header {
@@ -45,7 +48,7 @@
   .short-code {
     border-radius: 4px;
     padding: 2px 8px;
-    background-color: var(--markdown-code-header-color);
+    background-color: var(--markdown-short-code-background);
     color: var(--font-sub-color);
     margin: 0 4px;
   }

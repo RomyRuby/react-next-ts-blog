@@ -24,16 +24,15 @@
     #f1f1f8 95%,
     #f0f1f8 100%
   );
-
   --circle-color: linear-gradient(
     180deg,
     rgba(71, 15, 239, 0.4) 0%,
     rgba(49, 15, 239, 0.62) 68%,
     rgba(37, 15, 239, 0.04) 100%
   );
-
   --markdown-code-header-color: rgba(86, 103, 241, 0.08);
   --markdown-code-body-color: rgba(86, 103, 241, 0.04);
+  --markdown-short-code-background: rgba(86, 103, 241, 0.08);
   --modal-mask-background: #ffffffe6;
   --modal-header-background: #ffffff;
   --modal-close-color: rgba(0, 0, 0, 0.45);
@@ -68,9 +67,9 @@
     rgba(162, 145, 255, 0.806) 68%,
     rgba(116, 101, 255, 0.936) 100%
   );
-
   --markdown-code-header-color: rgba(191, 197, 244, 0.1);
   --markdown-code-body-color: rgba(191, 197, 244, 0.1);
+  --markdown-short-code-background: rgba(195, 177, 255, 0.4);
   --modal-mask-background: rgba(79, 93, 99, 0.7);
   --modal-header-background: rgba(0, 0, 0, 0.45);
   --modal-close-color: #ffffff;
