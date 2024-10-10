@@ -260,7 +260,6 @@ const Home = () => {
         onCancel={handleCancel}
         centered
         footer={null}
-        styles={{ mask: { background: "#ffffffe6" } }}
       >
         <Chat />
       </Modal>
@@ -273,7 +272,6 @@ const Home = () => {
         onCancel={() => handleSetCard(false)}
         centered
         footer={null}
-        styles={{ mask: { background: "#ffffffe6" } }}
       >
         <div className="card-modal-avatar"></div>
         <div className="card-modal-name">Romy Zhang</div>

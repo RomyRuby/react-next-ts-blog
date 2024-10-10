@@ -1,6 +1,5 @@
 .chat-modal {
   position: relative;
-
   .ant-modal-content {
     height: calc(100vh - 160px);
     padding: 0;
@@ -14,7 +13,10 @@
       justify-content: center;
       align-items: center;
       border-bottom: 1px solid rgba(187, 187, 187, 0.2);
-      border-radius: 16px;
+      border-radius: 16px 16px 0 0;
+      .ant-modal-title {
+        color: var(--font-main-color);
+      }
     }
 
     .ant-modal-close {
@@ -24,6 +26,7 @@
 
     .ant-modal-body {
       height: calc(100% - 64px);
+      border-radius: 16px;
       .chat {
         height: 100%;
         display: flex;
@@ -75,7 +78,6 @@
               margin-top: 2px;
             }
             .ai-bubble-content {
-              background: rgba(187, 187, 187, 0.2);
               border: 1px solid transparent;
               border-radius: 12px;
               display: flex;
@@ -86,6 +88,8 @@
               padding: 12px 16px;
               position: relative;
               box-sizing: border-box;
+              background-color: var(--ai-bubble-background);
+              color: var(--font-main-color);
               p {
                 margin-top: 16px;
                 &:first-child {
@@ -133,6 +137,8 @@
               border-radius: 0;
               font-size: 16px;
               line-height: 24px;
+              color: var(--font-main-color);
+              background-color: var(--modal-body-background);
             }
           }
           .chat-box-send {
@@ -146,11 +152,7 @@
             justify-content: center;
             align-items: center;
             margin-top: auto;
-            background: linear-gradient(
-              48deg,
-              #615ced -2%,
-              var(--theme-color) 93%
-            );
+            background: var(--send-button-background);
             border: hidden;
             color: #ffffff;
             padding: 1px 2px 0 0;

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { use, useEffect, useState } from "react";
 import Icon from "../Icon";
 import "./index.scss";
 
@@ -10,17 +10,23 @@ const LightSwitch = ({
   value: boolean;
   onChange: Function;
 }) => {
+  const [isLightOn, setIsLightOn] = useState(true);
+
+  useEffect(() => {
+    setIsLightOn(value);
+  }, [value]);
+
   return (
     <>
       <div
-        className={`light-switch ${!value ? "light-switch__dark" : ""}`}
+        className={`light-switch ${!isLightOn ? "light-switch__dark" : ""}`}
         onClick={() => {
-          onChange(!value);
+          onChange(!isLightOn);
         }}
       >
         <div className="light-switch-check">
-          {!value && <Icon name="moon" size={12} />}
-          {value && <Icon name="sun" size={12} />}
+          {!isLightOn && <Icon name="moon" size={12} />}
+          {isLightOn && <Icon name="sun" size={12} />}
         </div>
       </div>
     </>

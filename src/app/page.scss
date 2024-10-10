@@ -166,7 +166,7 @@
     margin: 100px auto 200px auto;
     position: relative;
     max-width: 1200px;
-    animation: pause-hidden 0.2s linear, enter-from-bottom-2 0.7s 0.2s linear;
+    animation: pause-hidden 0.1s linear, enter-from-bottom-2 0.7s 0.1s linear;
     width: 40%;
     min-width: 480px;
     min-height: 185px;
@@ -265,10 +265,8 @@
 .card-modal {
   width: 350px !important;
   .ant-modal-content {
-    background-color: #fafafa;
+    background-color: var(--modal-content-background);
     padding: 32px;
-    border: 1px solid rgba(228, 228, 231);
-    box-shadow: 1px 10px 15px 0px rgba(228, 228, 231);
     .ant-modal-close {
       width: 24px;
       height: 24px;

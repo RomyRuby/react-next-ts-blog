@@ -34,6 +34,17 @@
 
   --markdown-code-header-color: rgba(86, 103, 241, 0.08);
   --markdown-code-body-color: rgba(86, 103, 241, 0.04);
+  --modal-mask-background: #ffffffe6;
+  --modal-header-background: #ffffff;
+  --modal-close-color: rgba(0, 0, 0, 0.45);
+  --modal-body-background: #ffffff;
+  --modal-content-background: #fafafa;
+  --ai-bubble-background: rgba(187, 187, 187, 0.2);
+  --send-button-background: linear-gradient(
+    48deg,
+    #615ced -2%,
+    var(--theme-color) 93%
+  );
 }
 
 .dark {
@@ -60,6 +71,13 @@
 
   --markdown-code-header-color: rgba(191, 197, 244, 0.1);
   --markdown-code-body-color: rgba(191, 197, 244, 0.1);
+  --modal-mask-background: rgba(79, 93, 99, 0.7);
+  --modal-header-background: rgba(0, 0, 0, 0.45);
+  --modal-close-color: #ffffff;
+  --modal-body-background: rgba(15, 31, 36);
+  --modal-content-background: rgba(15, 31, 36);
+  --ai-bubble-background: rgba(187, 187, 187, 0.2);
+  --send-button-background: rgba(195, 177, 255, 0.998);
 }
 
 body {
@@ -140,7 +158,7 @@ code {
     transform: translateY(100%);
   }
 
-  20% {
+  10% {
     opacity: 1;
     transform: translateY(calc(100% - 60px));
   }
@@ -171,6 +189,19 @@ code {
   }
 }
 
-// .ant-message .ant-message-notice-wrapper .ant-message-notice-content {
-//   box-shadow: 1px 10px 15px 0px rgba(228, 228, 231, 0.8);
-// }
+.ant-modal-mask {
+  background-color: var(--modal-mask-background) !important;
+}
+
+.ant-modal-close {
+  color: var(--modal-close-color) !important;
+}
+
+.ant-modal-header {
+  color: var(--font-main-color);
+  background-color: var(--modal-header-background) !important;
+}
+
+.ant-modal-body {
+  color: var(--font-main-color);
+}
