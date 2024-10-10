@@ -2,16 +2,17 @@
   h2 {
     display: block;
     font-size: 28px;
-    height: 48px;
+    height: auto;
     line-height: 48px;
     box-sizing: border-box;
     border-radius: 8px;
     font-weight: 500;
-    margin: 16px 0;
+    margin: 24px 0 0 0;
   }
   p {
     font-size: 16px;
-    margin: 16px 0;
+    margin: 8px 0;
+    text-indent: 2em;
   }
   .code-container {
     border-radius: 8px;

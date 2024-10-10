@@ -6,6 +6,13 @@
   .article-wrap {
     position: relative;
     width: 920px;
-    margin: 120px auto auto auto;
+    margin: 120px auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .article-wrap {
+    width: 80% !important;
+    margin-top: 80px !important;
   }
 }
