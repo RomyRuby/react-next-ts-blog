@@ -54,7 +54,7 @@ const FlowOut = ({
     if (contentArray.length != 0) {
       flowOutput();
     }
-  }, [contentArray, flowOutput]);
+  }, [contentArray]);
 
   const Loading = () => {
     return (

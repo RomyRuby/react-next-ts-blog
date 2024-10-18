@@ -24,6 +24,7 @@ const Chat = () => {
   const [inputting, setInputting] = useState(false);
   const chatListRef = useRef<null | HTMLDivElement>(null);
   const chatItemsRef = useRef<null | HTMLDivElement>(null);
+
   useEffect(() => {
     function handleCompositionStart() {
       setInputting(true);
@@ -78,12 +79,6 @@ const Chat = () => {
     }, 500);
     try {
       const res = await qwenChat({ message });
-      // const res = {
-      //   data: {
-      //     content:
-      //       "你好！我是Romy Zhang，一名前端开发程序员。很高兴在虚拟世界与你相遇！如果你有关于前端开发的问题或者需要一些建议，无论是关于HTML、CSS、JavaScript还是React、Vue等框架，我都会尽力帮助你。无论是新手入门还是解决具体的技术难题，都可以来聊聊哦。 如果你对某个特定的前端技术或项目有疑问，不妨详细描述一下，我们可以一起探讨解决方案。无论是网站布局、交互设计，还是性能优化、跨浏览器兼容性问题，我都乐于分享我的经验和见解。让我们一起在这个充满创造性和挑战的领域里成长吧！",
-      //   },
-      // };
       newChatList = newChatList.map((item) => {
         if (item.id === "ai-" + id) {
           return { ...item, content: res.data.content };
