@@ -215,7 +215,7 @@
             color: var(--font-main-color);
 
             &:hover {
-              color: var(--font-main-color);
+              color: var(--font-hover-color);
               background-size: 100% 2px;
               transition: all 0.5s ease;
             }
@@ -250,6 +250,9 @@
       }
       span {
         margin-left: 8px;
+      }
+      &:hover {
+        color: var(--font-hover-color);
       }
     }
   }
