@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+// const path = require('path');
+import path from 'path';
+const __dirname = new URL('.', import.meta.url).pathname;
+
 const nextConfig = {
   // reactStrictMode: false,
   images: {
@@ -11,9 +15,9 @@ const nextConfig = {
   },
   output: 'standalone',
   env: {
-    BASE_URL: 'http://47.98.122.17:8080'
+    BASE_URL: 'http://47.121.181.90:8080'
     // BASE_URL: 'http://127.0.0.1:8080'
-  }
+  },
 };
 
 export default nextConfig;
