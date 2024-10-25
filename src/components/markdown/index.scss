@@ -6,7 +6,27 @@
     line-height: 48px;
     box-sizing: border-box;
     border-radius: 8px;
-    font-weight: 500;
+    font-weight: 600;
+    margin: 32px 0 0 0;
+  }
+  h3 {
+    display: block;
+    font-size: 24px;
+    height: auto;
+    line-height: 48px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 32px 0 0 0;
+  }
+  h4 {
+    display: block;
+    font-size: 20px;
+    height: auto;
+    line-height: 48px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 600;
     margin: 32px 0 0 0;
   }
   p,
@@ -43,6 +63,9 @@
           background-color: var(--background-sub-color);
         }
       }
+    }
+    .p-4 {
+      letter-spacing: 1px;
     }
   }
   .short-code {

@@ -52,7 +52,7 @@
   --font-main-color: oklch(1 0 0);
   --font-sub-color: oklch(100% 0 0 / 0.6);
   --font-third-color: #ffffff;
-  --font-hover-color: #e6d9ff;
+  --font-hover-color: var(--theme-color);
   --font-main-size: 14px;
   --font-background-color: rgba(229, 231, 235, 0.4);
   --divider-main-color: #e2e3e9;
