@@ -15,8 +15,7 @@ const nextConfig = {
   },
   output: 'standalone',
   env: {
-    BASE_URL: 'http://47.121.181.90:8080'
-    // BASE_URL: 'http://127.0.0.1:8080'
+    BASE_URL: 'https://www.romyzhang.com/api'
   },
 };
 
