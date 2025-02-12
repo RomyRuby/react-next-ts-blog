@@ -5,7 +5,7 @@
     position: relative;
     height: 100vh;
     // min-height: 700px;
-    padding: calc(50vh - 170px) 0 0 0;
+    padding: calc(50vh - 210px) 0 0 0;
     box-sizing: border-box;
     margin-bottom: 100px;
     .main-introduce {
@@ -96,51 +96,93 @@
       }
       .main-introduce-right {
         flex-shrink: 0;
-        width: 580px;
         position: relative;
         display: flex;
         justify-content: flex-end;
+
         .main-introduce-right-img-wrap {
           position: relative;
           .main-introduce-right-img {
             cursor: pointer;
             position: relative;
             z-index: 10;
-            width: 300px;
-            height: 300px;
-            border-radius: 150px;
+            width: 400px;
+            height: 400px;
+            border-radius: 35px;
             background-size: 100% 100%;
             background-image: url("../../static/img/avatar.jpg");
-            animation: shake 2.5s linear infinite;
+            // animation: shake 2.5s linear infinite;
           }
 
-          .img-border-1 {
-            position: absolute;
-            z-index: 8;
-            width: 340px;
-            height: 340px;
-            top: 150px;
-            left: 150px;
-            transform: translate(-50%, -50%);
-            background: var(--circle-color);
-            opacity: 0.1;
-            border-radius: 50%;
-            animation: lianyi-1 2.5s linear infinite;
-          }
+          // .img-border-1 {
+          //   position: absolute;
+          //   z-index: 8;
+          //   width: 340px;
+          //   height: 340px;
+          //   top: 150px;
+          //   left: 150px;
+          //   transform: translate(-50%, -50%);
+          //   background: var(--circle-color);
+          //   opacity: 0.1;
+          //   border-radius: 50%;
+          //   animation: lianyi-1 2.5s linear infinite;
+          // }
 
-          .img-border-2 {
-            position: absolute;
-            z-index: 7;
-            width: 380px;
-            height: 380px;
-            top: 150px;
-            left: 150px;
-            transform: translate(-50%, -50%);
-            background: var(--circle-color);
-            opacity: 0.04;
-            border-radius: 50%;
-            animation: lianyi-2 2.5s linear infinite;
-          }
+          // .img-border-2 {
+          //   position: absolute;
+          //   z-index: 7;
+          //   width: 380px;
+          //   height: 380px;
+          //   top: 150px;
+          //   left: 150px;
+          //   transform: translate(-50%, -50%);
+          //   background: var(--circle-color);
+          //   opacity: 0.04;
+          //   border-radius: 50%;
+          //   animation: lianyi-2 2.5s linear infinite;
+          // }
+        }
+        .main-introduce-right-bubble-1 {
+          position: absolute;
+          z-index: 100;
+          left: -120px;
+          top: -28px;
+        }
+        .main-introduce-right-bubble-2 {
+          position: absolute;
+          z-index: 101;
+          left: -100px;
+          top: -49px;
+        }
+        .main-introduce-right-bubble-3 {
+          position: absolute;
+          z-index: 100;
+          left: -120px;
+          top: 42px;
+        }
+        .main-introduce-right-bubble-4 {
+          position: absolute;
+          z-index: 100;
+          left: 20px;
+          top: 214px;
+        }
+        .main-introduce-right-bubble-5 {
+          position: absolute;
+          z-index: 100;
+          left: -120px;
+          top: 248px;
+        }
+        .main-introduce-right-bubble-6 {
+          position: absolute;
+          z-index: 101;
+          left: 45px;
+          top: 330px;
+        }
+        .main-introduce-right-bubble-7 {
+          position: absolute;
+          z-index: 101;
+          right: -150px;
+          top: -49px;
         }
       }
     }

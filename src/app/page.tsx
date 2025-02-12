@@ -2,7 +2,8 @@
 import Icon from "@/components/Icon/index";
 import AnimationSpanList from "@/components/AnimationSpanList";
 import Chat from "@/components/Chat";
-import { Button, Popover, Modal, message, Tooltip } from "antd";
+import Bubble from "@/components/roro-ui/bubble";
+import { Button, Popover, Modal, message, Tooltip, Divider } from "antd";
 import { useEffect, useMemo, useState, Fragment, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { articles } from "@/api/article";
@@ -17,7 +18,6 @@ const Home = () => {
   const [articleVisible, setArticleVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCardOpen, setIsCardOpen] = useState(false);
-  const [MainIntroduceLeftFlag] = useState(1);
   const [articleList, setArticleList] = useState([]);
   const [cardType, setCardType] = useState("");
   const mainArticleRef = useRef<null | HTMLDivElement>(null);
@@ -217,6 +217,70 @@ const Home = () => {
             {MainIntroduceLeft}
             {/* 右边的大头像 */}
             <div className="main-introduce-right">
+              <Bubble
+                width={220}
+                height={50}
+                borderRadius={[28]}
+                bubbleClass="main-introduce-right-bubble-1"
+              />
+              <Bubble
+                width={120}
+                height={30}
+                borderRadius={[16]}
+                backgroundColor="var(--theme-sub-color)"
+                bubbleClass="main-introduce-right-bubble-2"
+              />
+              <Bubble
+                width={220}
+                height={50}
+                borderRadius={[28]}
+                backgroundColor="var(--theme-color)"
+                bubbleClass="main-introduce-right-bubble-3"
+                slot={<span>Next</span>}
+              />
+              <Bubble
+                width={120}
+                height={25}
+                borderRadius={[13]}
+                backgroundColor="var(--theme-sub-color)"
+                bubbleClass="main-introduce-right-bubble-4"
+                slot={<span>@Romy Zhang</span>}
+              />
+              <Bubble
+                width={240}
+                height={100}
+                borderRadius={[25, 25, 25, 4]}
+                bubbleClass="main-introduce-right-bubble-5"
+              />
+              <Bubble
+                width={240}
+                height={120}
+                borderRadius={[25, 25, 4, 25]}
+                backgroundColor="var(--theme-color)"
+                bubbleClass="main-introduce-right-bubble-6"
+              />
+              <Bubble
+                width={200}
+                height={200}
+                borderRadius={[25]}
+                backgroundColor="var(--theme-sub-color)"
+                bubbleClass="main-introduce-right-bubble-7"
+                slot={
+                  <div className="main-introduce-right-bubble-7-content">
+                    <div>
+                      我是 <span>AI Romi</span>
+                    </div>
+                    <div>擅长前端问题，很高兴见到你！</div>
+                    <Bubble
+                      width={125}
+                      height={55}
+                      borderRadius={[25]}
+                      backgroundColor="var(--theme-color)"
+                      slot={<span>Start</span>}
+                    />
+                  </div>
+                }
+              />
               <Popover
                 content={
                   <div

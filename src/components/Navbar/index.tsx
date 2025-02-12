@@ -50,9 +50,8 @@ const Navbar = () => {
     >
       <div className="layout-navbar">
         <div className="layout-navbar-avatar">
-          <Link className="layout-navbar-avatar-icon" href="/"></Link>
           <Link className="layout-navbar-avatar-title" href="/">
-            <span>Romy </span>Space
+            Romy <span>Space</span>
           </Link>
         </div>
         <div className="layout-navbar-nav">

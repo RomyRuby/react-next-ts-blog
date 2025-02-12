@@ -1,6 +1,6 @@
 // import type { Metadata } from "next";
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/index";
 import Footer from "@/components/Footer/index";
 import "./tailwind.css";
 import "./globalReset.scss";
