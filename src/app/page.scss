@@ -111,36 +111,7 @@
             border-radius: 35px;
             background-size: 100% 100%;
             background-image: url("../../static/img/avatar.jpg");
-            // animation: shake 2.5s linear infinite;
           }
-
-          // .img-border-1 {
-          //   position: absolute;
-          //   z-index: 8;
-          //   width: 340px;
-          //   height: 340px;
-          //   top: 150px;
-          //   left: 150px;
-          //   transform: translate(-50%, -50%);
-          //   background: var(--circle-color);
-          //   opacity: 0.1;
-          //   border-radius: 50%;
-          //   animation: lianyi-1 2.5s linear infinite;
-          // }
-
-          // .img-border-2 {
-          //   position: absolute;
-          //   z-index: 7;
-          //   width: 380px;
-          //   height: 380px;
-          //   top: 150px;
-          //   left: 150px;
-          //   transform: translate(-50%, -50%);
-          //   background: var(--circle-color);
-          //   opacity: 0.04;
-          //   border-radius: 50%;
-          //   animation: lianyi-2 2.5s linear infinite;
-          // }
         }
         .main-introduce-right-bubble-1 {
           position: absolute;
@@ -155,34 +126,98 @@
           top: -49px;
         }
         .main-introduce-right-bubble-3 {
+          cursor: pointer;
           position: absolute;
           z-index: 100;
           left: -120px;
           top: 42px;
+          font-size: 26px;
+          font-weight: 600;
+          line-height: 50px;
+          padding: 0;
+          text-align: center;
+          .main-introduce-right-bubble-3-content {
+            span {
+              color: var(--theme-white-color);
+              opacity: 0.8;
+            }
+          }
         }
         .main-introduce-right-bubble-4 {
           position: absolute;
           z-index: 100;
-          left: 20px;
-          top: 214px;
+          left: 8px;
+          top: 254px;
+          font-size: 12px;
+          line-height: 25px;
+          color: var(--font-sub-color);
+          padding: 0;
+          text-align: center;
         }
         .main-introduce-right-bubble-5 {
           position: absolute;
           z-index: 100;
-          left: -120px;
-          top: 248px;
+          left: -130px;
+          top: 293px;
+          display: block;
+          padding: 16px;
+          p {
+            line-height: 1.8; /* 调整这个值来控制行与行之间的距离 */
+            background-color: var(
+              --theme-sub-color,
+              0.5
+            ); /* 设置你想要的背景颜色 */
+            display: inline; /* 确保背景只应用于文本区域而非整个行宽 */
+            padding: 0px 8px; /* 根据需要调整，为背景留出一些空间 */
+            border-radius: 8px;
+          }
         }
+
         .main-introduce-right-bubble-6 {
           position: absolute;
           z-index: 101;
-          left: 45px;
-          top: 330px;
-        }
-        .main-introduce-right-bubble-7 {
-          position: absolute;
-          z-index: 101;
           right: -150px;
-          top: -49px;
+          top: 66px;
+          padding: 16px;
+          .main-introduce-right-bubble-6-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            img {
+              width: 45px;
+              height: 45px;
+              border-radius: 23px;
+              display: inline-block;
+              margin: 0 auto;
+            }
+            .main-introduce-right-bubble-6-content-name {
+              margin-top: 4px;
+            }
+            .main-introduce-right-bubble-6-content-description {
+              font-size: 12px;
+              text-align: center;
+              margin-top: 8px;
+            }
+            .main-introduce-right-bubble-7 {
+              cursor: pointer;
+              margin-top: auto;
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 55px;
+              padding: 0;
+              text-align: center;
+              &：hover {
+                animation: animate__animated animate__bounce;
+              }
+              span {
+                color: var(--theme-white-color);
+                opacity: 0.8;
+              }
+            }
+          }
         }
       }
     }
@@ -369,51 +404,6 @@
       background-color: #fafafacc;
       border-radius: 4px;
     }
-  }
-}
-
-// 以下是动画
-@keyframes lianyi-1 {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0.08;
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.14;
-  }
-
-  83% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.08;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0;
-  }
-}
-
-@keyframes lianyi-2 {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0.01;
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.06;
-  }
-
-  80% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.03;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0;
   }
 }
 

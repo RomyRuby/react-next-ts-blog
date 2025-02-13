@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      .highlight-text {
+        line-height: 2; /* 调整这个值来控制行与行之间的距离 */
+        background-color: yellow; /* 设置你想要的背景颜色 */
+        display: inline; /* 确保背景只应用于文本区域而非整个行宽 */
+        padding: 2px; /* 根据需要调整，为背景留出一些空间 */
+      }
+
+      /* 如果需要更精确地控制每一行的背景，可以考虑使用 ::first-line 伪元素和其他技巧，
+      但请注意这些方法可能不完全支持所有浏览器或情况。*/
+
+      /* 对于现代浏览器，可以尝试下面的高级技巧来确保背景仅限于文本部分并具有间隔： */
+
+      /*.highlight-text {*/
+      /*    line-height: 2; !* 增加这个值以在行间添加更多空间 *!*/
+      /*    background:*/
+      /*            linear-gradient(yellow, yellow) no-repeat,*/
+      /*            linear-gradient(white, white) repeat-y;*/
+      /*    background-size: 100% 1.5em, !* 调整第二个值来控制每行背景的高度 *!*/
+      /*    100% calc((100% - 1.5em) / 2); !* 计算间隔大小 *!*/
+      /*    background-position: 0 0, !* 第一个背景位置 *!*/
+      /*    0 1.75em; !* 第二个背景位置，根据行高和间隔调整 *!*/
+      /*}*/
+    </style>
+  </head>
+  <body>
+    <p class="highlight-text">
+      这里是需要高亮显示的文字内容。 如果文字超出了一行，它会自动换到下一行，
+      并且每一行都将有独立的背景色和间隔。
+    </p>
+  </body>
+</html>

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/index";
 import "./tailwind.css";
 import "./globalReset.scss";
 import "./globals.scss";
+import "animate.css";
 
 export default async function RootLayout({
   children,

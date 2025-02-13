@@ -2,9 +2,6 @@
   background-color: var(--theme-white-color);
   border-radius: 20px;
   color: var(--font-main-color);
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
 }

@@ -12,6 +12,8 @@ import Link from "next/link";
 import moment from "moment";
 import "moment/locale/zh-cn";
 import "./page.scss";
+import Signature from "@/components/roro-ui/signature";
+import Image from "next/image";
 moment.locale("zh-cn");
 
 const Home = () => {
@@ -221,87 +223,88 @@ const Home = () => {
                 width={220}
                 height={50}
                 borderRadius={[28]}
-                bubbleClass="main-introduce-right-bubble-1"
+                bubbleClass="main-introduce-right-bubble-1 animate__animated animate__fadeInDown animate__delay-1s"
               />
               <Bubble
                 width={120}
                 height={30}
                 borderRadius={[16]}
                 backgroundColor="var(--theme-sub-color)"
-                bubbleClass="main-introduce-right-bubble-2"
+                bubbleClass="main-introduce-right-bubble-2 animate__animated animate__fadeInDown animate__delay-1s"
               />
+
               <Bubble
                 width={220}
                 height={50}
                 borderRadius={[28]}
                 backgroundColor="var(--theme-color)"
-                bubbleClass="main-introduce-right-bubble-3"
-                slot={<span>Next</span>}
+                bubbleClass="main-introduce-right-bubble-3 animate__animated animate__fadeInDown animate__delay-2s"
+                slot={
+                  <div className="main-introduce-right-bubble-3-content ">
+                    Study Notes<span> ▶ </span>
+                  </div>
+                }
               />
               <Bubble
                 width={120}
                 height={25}
                 borderRadius={[13]}
                 backgroundColor="var(--theme-sub-color)"
-                bubbleClass="main-introduce-right-bubble-4"
+                bubbleClass="main-introduce-right-bubble-4 animate__animated animate__fadeInUp animate__delay-1s"
                 slot={<span>@Romy Zhang</span>}
               />
               <Bubble
-                width={240}
-                height={100}
-                borderRadius={[25, 25, 25, 4]}
-                bubbleClass="main-introduce-right-bubble-5"
-              />
-              <Bubble
-                width={240}
-                height={120}
-                borderRadius={[25, 25, 4, 25]}
-                backgroundColor="var(--theme-color)"
-                bubbleClass="main-introduce-right-bubble-6"
+                width={260}
+                height={140}
+                borderRadius={[25, 2, 25, 25]}
+                bubbleClass="main-introduce-right-bubble-5 animate__animated animate__fadeInUp animate__delay-2s"
+                slot={
+                  <>
+                    <p>hello，我是 Romy Zhang</p>
+                    <br />
+                    <div>
+                      这里是我的个人空间，目前我在这里分享一些自己的学习笔记和心得。接下来我会继续开发更多丰富的功能，玩得开心💜
+                    </div>
+                  </>
+                }
               />
               <Bubble
                 width={200}
                 height={200}
                 borderRadius={[25]}
                 backgroundColor="var(--theme-sub-color)"
-                bubbleClass="main-introduce-right-bubble-7"
+                bubbleClass="main-introduce-right-bubble-6 animate__animated animate__zoomIn animate__delay-1s"
                 slot={
-                  <div className="main-introduce-right-bubble-7-content">
-                    <div>
-                      我是 <span>AI Romi</span>
+                  <div className="main-introduce-right-bubble-6-content">
+                    <img src="/static/img/AI.jpg" alt="ai avatar" />
+                    <div className="main-introduce-right-bubble-6-content-name">
+                      我是 <span>AI Romi</span>,
                     </div>
-                    <div>擅长前端问题，很高兴见到你！</div>
+                    <div className="main-introduce-right-bubble-6-content-description">
+                      擅长前端问题，很高兴见到你！
+                    </div>
+
                     <Bubble
                       width={125}
                       height={55}
                       borderRadius={[25]}
                       backgroundColor="var(--theme-color)"
-                      slot={<span>Start</span>}
+                      slot={
+                        <div onClick={showModal}>
+                          Start<span> ▶ </span>
+                        </div>
+                      }
+                      bubbleClass="main-introduce-right-bubble-7"
                     />
                   </div>
                 }
               />
-              <Popover
-                content={
-                  <div
-                    className="main-introduce-right-img-popover"
-                    onClick={showModal}
-                  >
-                    Hi, AI Romy Here. Click To Chat<span> ▶ </span>
-                  </div>
-                }
-                placement="top"
-                align={{ offset: [0, -30] }}
-              >
-                <div className="main-introduce-right-img-wrap">
-                  <div
-                    className="main-introduce-right-img"
-                    onClick={showModal}
-                  ></div>
-                  <div className="img-border-1"></div>
-                  <div className="img-border-2"></div>
-                </div>
-              </Popover>
+
+              <div className="main-introduce-right-img-wrap animate__animated animate__lightSpeedInRight">
+                <div className="main-introduce-right-img"></div>
+                {/* <div className="img-border-1"></div>
+                <div className="img-border-2"></div> */}
+              </div>
             </div>
           </div>
           <div className="main-guide" onClick={() => scrollToArticle()}>

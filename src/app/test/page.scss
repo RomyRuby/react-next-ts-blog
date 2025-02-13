@@ -1,0 +1,6 @@
+.highlight-text {
+  line-height: 2; /* 调整这个值来控制行与行之间的距离 */
+  background-color: yellow; /* 设置你想要的背景颜色 */
+  display: inline; /* 确保背景只应用于文本区域而非整个行宽 */
+  padding: 2px; /* 根据需要调整，为背景留出一些空间 */
+}
